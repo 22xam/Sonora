@@ -1,0 +1,111 @@
+:root{
+    --color-principal:#591414;
+    --color-secundario:#8C1111;
+    --color-terciario:#A6242F;
+    --color-negro:#0D0908;
+    --color-alternativo-I:#7D6841;
+    --color-alternativo-II:#3045BF;
+    --color-apuesto:#145959;
+    --color-fondo:#E7E1E1;
+    --color-letra-pricipal: #fff;
+}
+
+footer{
+    display: flex;
+    align-items: start;
+    justify-content: space-around;
+    padding: 40px 30px;
+    background-color: var(--color-apuesto);
+    flex-wrap: wrap;
+    height: auto;
+}
+
+footer .section-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-evenly;
+    margin: 30px 10px;
+}
+
+footer .section-footer h3{
+    font-size: 1.4rem;
+    margin: 0px 0px 15px 0px;
+    color: var(--color-letra-pricipal);
+    font-family: 'Heebo', sans-serif;
+    text-transform: uppercase;
+}
+
+footer .section-footer a{
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: var(--color-letra-pricipal);
+    margin: 5px 0px;
+    font-weight: bold;
+}
+
+footer .section-footer p{
+    font-size: 1.1rem;
+    color: var(--color-letra-pricipal);
+    margin: 5px 0px;
+    font-weight: bold;
+}
+
+footer .section-footer a:hover{
+    color: var(--color-fondo);
+    text-decoration: dashed;
+    transition: 0.5s linear;
+}
+
+@media screen and (max-width: 840px) {
+    /*FOOTER*/
+    footer{
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+    footer .section-footer{
+        margin: 30px 0px;
+    }
+
+    footer .section-footer h3{
+        font-size: 1.2rem;
+    }
+
+    footer .section-footer a{
+        font-size: 0.9rem;
+    }
+
+    footer .section-footer p{
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    /*FOOTER*/
+    footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .section-footer{
+        align-items: center;
+        margin: 10px 0px;
+    }
+
+    footer .section-footer h3{
+        font-size: 1.2rem;
+    }
+
+    footer .section-footer a{
+        font-size: 0.9rem;
+    }
+
+    footer .section-footer p{
+        font-size: 0.9rem;
+    }
+}
