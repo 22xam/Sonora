@@ -1,0 +1,50 @@
+
+:root{
+  --color-principal:#591414;
+  --color-secundario:#8C1111;
+  --color-terciario:#A6242F;
+  --color-negro:#0D0908;
+  --color-alternativo-I:#7D6841;
+  --color-alternativo-II:#3045BF;
+  --color-apuesto:#145959;
+  --color-fondo:#E7E1E1;
+  --color-letra-pricipal: #fff;
+}
+
+
+
+
+.album-card {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin: 20px 0;
+}
+
+.position {
+  font-size: 24px;
+  margin-right: 20px;
+}
+
+.album-image {
+  width: 160px;
+  height: 160px;
+  margin-right: 20px;
+}
+
+.details {
+  flex-grow: 1;
+}
+
+.artist {
+  font-weight: bold;
+}
+
+.title {
+  font-style: italic;
+  font-weight: bold;
+
+}
+
+

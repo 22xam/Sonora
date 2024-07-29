@@ -1,0 +1,9 @@
+.bar-title { 
+    display: grid;
+    place-items: center;
+    margin-top: 2%;
+}
+
+.bar-title h2 {
+    color: var(--color-secundario);
+    font-size:xx-large}
