@@ -1,0 +1,180 @@
+
+:root{
+    --color-principal:#591414;
+    --color-secundario:#8C1111;
+    --color-terciario:#A6242F;
+    --color-negro:#0D0908;
+    --color-alternativo-I:#7D6841;
+    --color-alternativo-II:#3045BF;
+    --color-apuesto:#145959;
+    --color-fondo:#E7E1E1;
+    --color-letra-pricipal: #fff;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif; 
+}
+
+main{
+    flex-grow: 1;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(/src/assets/banner-1.jpg);
+   /* background: radial-gradient(circle, rgb(82, 51, 43) 0%, rgba(166,138,86,1) 100%);*/
+    min-height: 90vh;
+    display: grid;
+    place-content: center;
+    overflow: hidden;
+    padding: 20px 0px;
+}
+
+
+
+.login-registro {
+   position: relative;
+   width: 20rem;
+   height: 30rem;
+}
+
+.login-registro .container-form{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 30px;
+    height: 100%;
+    background-color: var(--color-letra-pricipal);
+    border-radius: .5rem;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+}
+
+.login-registro .container-form form .icono{
+    font-size: 3rem;
+    text-align: center;
+    font-weight: bold;
+    color: var(--color-negro);
+}
+
+.login-registro .container-form form h2{
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bold;
+    color: var(--color-negro);
+}
+
+.login-registro .container-form form .container-input{
+    position: relative;
+    width: 100%;
+    margin: 1rem 0;
+}
+
+.login-registro .container-form form .container-input i,
+.login-registro .container-form form .container-input label{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    color: var(--color-principal);
+    padding: 0.5rem;
+    pointer-events: none;
+    transition: all .5s ease;
+}
+
+.login-registro .container-form form .container-input i{
+    left: 0.5rem;
+}
+
+.login-registro .container-form form .container-input label{
+    left: 2rem;
+    font-weight: bold;
+}
+
+.login-registro .container-form form .container-input input{
+    width: 100%;
+    height: 3.2rem;
+    padding: 0.4rem;
+    border-radius: 0.5em;
+    border: none;
+    outline: none;
+    border: 0.1rem solid var(--color-negro);
+    font-size: 1rem;
+    color: var(--color-negro);
+    background: transparent;
+}
+
+form .container-input input:focus~label,
+form .container-input input:valid~label,
+form .container-input input:focus~i,
+form .container-input input:valid~i{
+    top: 0 !important;
+    font-size: .9rem !important;
+    padding: 0 !important;
+    font-weight: bold;
+    background-color: var(--color-letra-pricipal);
+}
+
+.login-registro .container-form form .recordar-contra a{
+    color: var(--color-secundario);
+    text-decoration: none;
+    font-size: .9rem;
+    font-weight: bold;
+    transform: all .5s ease;
+}
+
+.login-registro .container-form form .recordar-contra a:hover{
+    color: var(--color-terciario);
+}
+
+.login-registro .container-form form .btn{
+    background-color: var(--color-principal);
+    color: var(--color-letra-pricipal);
+    font-weight: bold;
+    width: 100%;
+    height: 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 1rem 0;
+    outline: none;
+    border: none;
+    border-radius: .5rem;
+    box-shadow: 0 .1rem .5rem rgba(0, 0, 0, .4);
+}
+
+.login-registro .container-form form .link{
+    text-align: center;
+    font-size: 1rem;
+    color:var(--color-negro);
+    font-weight: bold;
+}
+
+.login-registro .container-form form .link a{
+    text-decoration: none;
+    font-size: 1rem;
+    color: var(--color-principal);
+    font-weight: bold;
+    transition: all .5s ease;
+}
+
+.login-registro .container-form form .link a:hover{
+    color: var(--color-secundario);
+}
+
+.login-registro .registro{
+    transform: rotate(7deg);
+}
+
+.login-registro.animacion-logueo .container-form.logueo{
+    animation: signin-flip 1s ease-in-out forwards;
+}
+

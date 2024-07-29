@@ -2,6 +2,7 @@
     --color-principal:#591414;
     --color-secundario:#8C1111;
     --color-terciario:#A6242F;
+    --color-cuarto:#C5029C;
     --color-negro:#0D0908;
     --color-alternativo-I:#7D6841;
     --color-alternativo-II:#3045BF;
@@ -12,7 +13,7 @@
 
 .banner {
     height: 600px;
-    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(/src/assets/banner-1.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(/src/assets/banner-1.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -61,7 +62,7 @@
 }
 
 .banner article .btn-login a{
-    background-color:var(--color-terciario);
+    background-color:var(--color-cuarto);
     color: var(--color-letra-pricipal);
     text-decoration: none;
     font-size: 1.2rem;
