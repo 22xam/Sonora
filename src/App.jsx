@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <HeaderBar />
-      <Auth />
+      <MainPage />
       <FooterBar />
     </>
   );

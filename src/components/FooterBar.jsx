@@ -3,7 +3,7 @@ function FooterBar() {
     <div>
       <footer>
         <section className="section-footer">
-          <h3>¿Por SONORA?</h3>
+          <h3>¿Por que usar SONORA?</h3>
           <a href="#">Misión</a>
           <a href="#">Visión</a>
           <a href="#">Descripcioón</a>
