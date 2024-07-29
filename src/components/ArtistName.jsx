@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 function ArtistName({ artistId }) {
   const [artistName, setArtistName] = useState("");
   const [loading, setLoading] = useState(true);
-  const token = "b309c840f86b9f63548c680f36c7e6ef1e62dc00";
 
   useEffect(() => {
     const fetchArtistName = async () => {
@@ -14,7 +13,7 @@ function ArtistName({ artistId }) {
             method: "GET",
             headers: {
               "Content-Type": "application/json",
-              Authorization: `Bearer ${token}`,
+              Authorization: `Bearer ${import.meta.env.VITE_TOKEN}`,
             },
           }
         );

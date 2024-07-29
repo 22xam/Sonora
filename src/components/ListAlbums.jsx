@@ -3,7 +3,6 @@ import CardAlbums from "./CardAlbums";
 
 const ListAlbums = () => {
   const [albums, setAlbums] = useState([]);
-  const token = "b309c840f86b9f63548c680f36c7e6ef1e62dc00";
 
   useEffect(() => {
     const fetchAlbums = async () => {
@@ -14,7 +13,7 @@ const ListAlbums = () => {
             method: "GET",
             headers: {
               "Content-Type": "application/json",
-              Authorization: `Bearer ${token}`,
+              Authorization: `Bearer ${import.meta.env.VITE_API_TOKEN}`,
             },
           }
         );
