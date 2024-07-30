@@ -1,7 +1,15 @@
+.list-albums {
+    display: flex;
+    background-color: var(--color-fondo);
+    flex-direction: column;
+    align-items: center;
+    justify-content:center ;
+    padding: 10px 20px;
+}
 .bar-title { 
     display: grid;
     place-items: center;
-    margin-top: 2%;
+    margin-top: 0%;
 }
 
 .bar-title h2 {

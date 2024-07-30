@@ -1,6 +1,6 @@
 import React from "react";
 import { format } from "date-fns";
-import ArtistName from "./ArtistName.jsx";
+import ArtistField from "./ArtistField";
 
 function formatDate(dateString) {
   try {
@@ -32,26 +32,22 @@ function CardAlbums({
       />
       <div className="details">
         <div className="title">
-          <strong>Titulo:</strong> {title}
+          <strong></strong> {title}
         </div>
         <div>
-          <strong>ID:</strong> {id}
+          <strong>Año:</strong> {year ? year : "N/A"}
         </div>
         <div>
-          <strong>Created At:</strong> {formatDate(created_at)}
+          <strong>Artista:</strong>{" "}
+          <ArtistField artistId={artist} field="name" />
         </div>
         <div>
-          <strong>Updated At:</strong> {new Date(updated_at).toLocaleString()}
-        </div>
-
-        <div>
-          <strong>Year:</strong> {year ? year : "N/A"}
+          <strong>Biografia:</strong>{" "}
+          <ArtistField artistId={artist} field="bio" />
         </div>
         <div>
-          <strong>Artist:</strong> <ArtistName artistId={artist} />
-        </div>
-        <div>
-          <strong>Owner:</strong> {owner}
+          <strong>Sitio Web:</strong>{" "}
+          <ArtistField artistId={artist} field="website" />
         </div>
       </div>
     </div>

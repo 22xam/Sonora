@@ -15,9 +15,13 @@
 
 
 .album-card {
+  background-color: #fff;
+  width: 80%;
+  position:relative;
   display: flex;
   align-items: center;
-  padding: 10px;
+  border-radius: 10px;
+  padding: 10px 20px;
   border: 1px solid #ccc;
   margin: 20px 0;
 }
@@ -31,6 +35,7 @@
   width: 160px;
   height: 160px;
   margin-right: 20px;
+  border-radius: 50%;
 }
 
 .details {
@@ -42,8 +47,9 @@
 }
 
 .title {
-  font-style: italic;
+  font-size: 1.6rem;
   font-weight: bold;
+  margin-bottom: 5px;
 
 }
 

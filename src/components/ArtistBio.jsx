@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 
-function ArtistName({ artistId }) {
-  const [artistName, setArtistName] = useState("");
+function ArtistBio({ artistId }) {
+  const [ArtistBio, setArtistBio] = useState("");
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchArtistName = async () => {
+    const fetchArtistBio = async () => {
       try {
         const response = await fetch(
           import.meta.env.VITE_API_URL + `harmonyhub/artists/${artistId}`,
@@ -19,26 +19,26 @@ function ArtistName({ artistId }) {
         );
         if (response.ok) {
           const data = await response.json();
-          setArtistName(data.name);
+          setArtistBio(data.bio);
         } else {
-          setArtistName("No se encontro Artista");
+          setArtistBio("No se encontro Bio del Artista");
         }
       } catch (error) {
-        console.error("Error obtener nombre del artista:", error);
-        setArtistName("Artista Inexistente");
+        console.error("Error obtener Bio del artista:", error);
+        setArtistBio("Bio Inexistente");
       } finally {
         setLoading(false);
       }
     };
 
-    fetchArtistName();
+    fetchArtistBio();
   }, [artistId]);
 
   if (loading) {
     return <span>cargando...</span>;
   }
 
-  return <span>{artistName}</span>;
+  return <span>{ArtistBio}</span>;
 }
 
-export default ArtistName;
+export default ArtistBio;

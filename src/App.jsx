@@ -11,6 +11,7 @@ import "./styles/mainPage.css";
 import "./styles/Auth.css";
 import "./styles/CardAlbums.css";
 import "./styles/ListAlbums.css";
+
 function App() {
   return (
     <>

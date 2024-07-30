@@ -26,7 +26,9 @@ function Auth() {
         console.log("Inicio de sesión exitoso", result);
         alert("Inicio de sesión exitoso");
         localStorage.setItem("token", result.token);
+        localStorage.setItem("user", data.username);
         console.log(localStorage.getItem("token"));
+        console.log(localStorage.getItem("user"));
         // Aquí puedes manejar el resultado como necesites, por ejemplo:
         // - Guardar el token en el estado o en el almacenamiento local
         // - Redirigir al usuario a otra página
