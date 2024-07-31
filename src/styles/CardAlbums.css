@@ -42,7 +42,7 @@
 .details {
   display: flexbox;
   flex-direction:column;
-  
+
   flex-grow: 1;
 }
 
@@ -57,4 +57,64 @@
 
 }
 
+.album-card .details .bio {
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: 'Heebo', sans-serif;
+  padding: 5px 0px;
+  text-align: start;
+}
 
+.botones-albums {
+  margin-top: 15px;
+  display:inline-flex;
+  align-items:flex-end;
+  justify-content: space-between;
+}
+
+.botones-albums .btn-abrir {
+  text-decoration: none;
+  color: var(--color-letra-pricipal);
+  background-color: var(--color-alternativo-I);
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin: 0px 5px 0px 0px;
+}
+
+.botones-albums .btn-abrir:hover {
+  background-color: var(--color-principal);
+}
+
+.botones-albums .btn-editar {
+  text-decoration: none;
+  color: var(--color-letra-pricipal);
+  background-color: var(--color-alternativo-II);
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin: 0px 5px 0px 0px;
+}
+
+.botones-albums .btn-editar:hover {
+  background-color: var(--color-principal);
+}
+
+.botones-albums .btn-eliminar {
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 500;
+  font-family: 'Heebo', sans-serif;
+  padding: 5px 10px;
+  text-align: center;
+  color: var(--color-letra-pricipal);
+  background-color: var(--color-terciario);
+  border-radius: 10px;
+  margin-top: 5px;
+  border-radius: 10px;
+  margin: 0px 5px 0px 0px;
+}
+
+.botones-albums .btn-eliminar:hover {
+  background-color: var(--color-principal);
+}

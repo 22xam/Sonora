@@ -41,13 +41,26 @@ function CardAlbums({
           <strong>Artista:</strong>{" "}
           <ArtistField artistId={artist} field="name" />
         </div>
-        <div>
-          <strong>Biografia:</strong>{" "}
-          <ArtistField artistId={artist} field="bio" />
+        <div className="bio">
+          <strong>Biografia</strong>{" "}
+          <p>
+            <ArtistField artistId={artist} field="bio" />
+          </p>
         </div>
         <div>
           <strong>Sitio Web:</strong>{" "}
           <ArtistField artistId={artist} field="website" />
+        </div>
+        <div className="botones-albums">
+          <label className="btn-abrir">
+            Abrir <i className="las la-comments"></i>
+          </label>
+          <label className="btn-editar">
+            Editar <i className="las la-edit"></i>
+          </label>
+          <label className="btn-eliminar">
+            Eliminar <i className="las la-trash"></i>
+          </label>
         </div>
       </div>
     </div>

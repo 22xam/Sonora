@@ -4,6 +4,7 @@ import MainPage from "./components/MainPage";
 import Auth from "./components/Auth";
 import CardAlbums from "./components/CardAlbums";
 import ListAlbums from "./components/ListAlbums";
+import HeaderAlbums from "./components/HeaderAlbums";
 
 import "./styles/FooterBar.css";
 import "./styles/HeaderBar.css";
@@ -16,7 +17,7 @@ function App() {
   return (
     <>
       <HeaderBar />
-      <ListAlbums />
+      <HeaderAlbums />
       <FooterBar />
     </>
   );
