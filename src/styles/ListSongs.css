@@ -1,0 +1,91 @@
+:root{
+    --color-principal:#591414;
+    --color-secundario:#8C1111;
+    --color-terciario:#A6242F;
+    --color-negro:#0D0908;
+    --color-alternativo-I:#7D6841;
+    --color-alternativo-II:#3045BF;
+    --color-apuesto:#145959;
+    --color-fondo:#E7E1E1;
+    --color-letra-pricipal: #fff;
+}
+
+
+.list-songs {
+    display: flex;
+    background-color: var(--color-fondo);
+    flex-direction: column;
+    align-items: center;
+    justify-content:center ;
+    padding: 10px 20px;
+}
+.bar-title { 
+    display: grid;
+    place-items: center;
+    margin-top: 0%;
+}
+
+.bar-title h2 {
+    color: var(--color-secundario);
+    font-size:xx-large;
+}
+    
+
+.my-5 {
+    background-color: var(--color-fondo);
+    padding: 10px 20px;
+}
+
+
+.button{
+    background: linear-gradient(to right, var(--color-apuesto), var(--color-principal)); 
+    color: var(--color-letra-pricipal);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 5px solid var(--color-apuesto);
+    cursor: pointer;
+    margin: 10px;
+    position:relative;
+    box-shadow: 0px 8px 16px rgba(0.2, 0.2, 0.5, 1);
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; 
+}
+
+.loading-text {
+    margin-bottom: 10px; 
+    font-size: 1rem; 
+    color: var(--color-negro); 
+}
+
+
+.song-list-title {
+    font-family: 'Trebuchet MS', Helvetica, sans-serif; 
+    font-size: 2.5rem;
+    color: var(--color-negro); 
+    text-align: center; 
+    font-weight: bold; 
+    font-style: italic;
+    text-shadow: 4px 4px 8px rgba(0.3, 0.3, 0.3, 0.5);
+}
+
+.song-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin: 10px;
+}
+
+.song-item {
+    width: 120%;
+}
+
+@media (max-width: 768px) {
+    .song-list {
+        grid-template-columns: 1fr;
+    }
+}
