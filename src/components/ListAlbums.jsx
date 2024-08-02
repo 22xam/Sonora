@@ -38,9 +38,6 @@ const ListAlbums = () => {
   return (
     <>
       <section className="list-albums">
-        <div className="bar-title">
-          <h2>Listado de Albunes</h2>
-        </div>
         <div className="album-list">
           {albums.map((album) => (
             <CardAlbums

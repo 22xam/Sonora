@@ -1,0 +1,62 @@
+.header-albums {
+    background-color:var(--color-apuesto);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-albums-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 10px 20px 10px;
+}
+
+.header-albums-title h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: bold;
+    color : var(--color-letra-pricipal)
+}
+
+.header-albums-card-create {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color:beige;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.header-albums-card-create img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+}
+
+.header-albums-card-create p {
+    margin: 0px 30px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: 'Heebo', sans-serif;
+    text-align: center;
+}
+
+.header-albums-card-create .header-albums-btn-create {
+    text-decoration: none;
+    font-size: 1.2rem;
+    background-color: var(--color-apuesto);
+    color: var(--color-letra-pricipal);
+    padding: 10px 20px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.header-albums-card-create .header-albums-btn-create:hover {
+    background-color: var(--color-principal);
+    transition: 0.2s linear;
+}
