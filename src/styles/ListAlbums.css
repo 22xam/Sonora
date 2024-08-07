@@ -1,4 +1,4 @@
-.list-albums {
+.list-songs {
     display: flex;
     background-color: var(--color-fondo);
     flex-direction: column;
@@ -15,3 +15,8 @@
 .bar-title h2 {
     color: var(--color-secundario);
     font-size:xx-large}
+    
+
+.my-5 {
+    background-color: azure;
+}

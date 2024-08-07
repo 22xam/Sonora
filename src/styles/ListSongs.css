@@ -78,10 +78,13 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     margin: 10px;
+    width: 100%; 
+    box-sizing: border-box;
 }
 
 .song-item {
-    width: 120%;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 @media (max-width: 768px) {
