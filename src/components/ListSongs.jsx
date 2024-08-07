@@ -45,7 +45,7 @@ export default function ListSongs() {
 
     return (
         <div>
-            <div className="my-5">
+            <div className="list-song">
                 <h2 className="title song-list-title">Lista de Canciones</h2>
                 <ul className = "song-list">
                     {songs.map((song) => (

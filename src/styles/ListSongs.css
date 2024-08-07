@@ -13,7 +13,7 @@
 
 .list-songs {
     display: flex;
-    background-color: var(--color-fondo);
+    background-color: transparent;
     flex-direction: column;
     align-items: center;
     justify-content:center ;
@@ -59,14 +59,14 @@
 .loading-text {
     margin-bottom: 10px; 
     font-size: 1rem; 
-    color: var(--color-negro); 
+    color: var(--color-letra-pricipal); 
 }
 
 
 .song-list-title {
     font-family: 'Trebuchet MS', Helvetica, sans-serif; 
     font-size: 2.5rem;
-    color: var(--color-negro); 
+    color: var(--color-letra-pricipal); 
     text-align: center; 
     font-weight: bold; 
     font-style: italic;
