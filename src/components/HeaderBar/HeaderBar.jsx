@@ -5,7 +5,7 @@ function HeaderBar() {
     <header>
       <nav className="menu_container">
         <section className="menu_logo">
-          <a href="index.html">
+          <a href="/">
             <i className="lab la-mastodon"></i>SONORA
           </a>
         </section>
@@ -18,7 +18,7 @@ function HeaderBar() {
           </li>
           <li className="menu_item menu_item_show">
             <a href="#Sistema" className="menu_link menu_arrow">
-              A cerca de
+              A cerca des
             </a>
           </li>
           <li className="menu_item menu_item_show">
@@ -27,7 +27,7 @@ function HeaderBar() {
             </a>
           </li>
           <li className="menu_item">
-            <a href="pages/login.html" className="menu_link">
+            <a href="login" className="menu_link">
               Iniciar sesion
             </a>
           </li>

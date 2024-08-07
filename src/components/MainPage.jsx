@@ -11,7 +11,7 @@ function MainPage() {
           Encuentra la banda sonora perfecta para cada momento.
         </p>
         <div className="btn-login">
-          <a href="pages/login"> Ingresa a SONARA</a>
+          <a href="login"> Ingresa a SONARA</a>
         </div>
       </article>
     </section>
