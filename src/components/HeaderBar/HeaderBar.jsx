@@ -1,3 +1,5 @@
+import "./HeaderBar.css";
+
 function HeaderBar() {
   return (
     <header>

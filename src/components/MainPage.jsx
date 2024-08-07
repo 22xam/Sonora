@@ -1,3 +1,5 @@
+import "../styles/mainPage.css";
+
 function MainPage() {
   return (
     <section className="banner">

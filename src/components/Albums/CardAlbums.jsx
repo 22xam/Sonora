@@ -1,6 +1,6 @@
 import React from "react";
 import { format } from "date-fns";
-import ArtistField from "./ArtistField";
+import ArtistField from "../Artist/ArtistField";
 
 function formatDate(dateString) {
   try {
