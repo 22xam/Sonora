@@ -1,8 +1,12 @@
+import "./Auth.css";
 import React, { useState } from "react";
+import { useAuth } from "../contexts/AuthContext.jsx";
 
 function Auth() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+
+  const { login } = useAuth("actions");
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -25,10 +29,11 @@ function Auth() {
         const result = await response.json();
         console.log("Inicio de sesión exitoso", result);
         alert("Inicio de sesión exitoso");
-        localStorage.setItem("token", result.token);
-        localStorage.setItem("user", data.username);
-        console.log(localStorage.getItem("token"));
-        console.log(localStorage.getItem("user"));
+        login(result.token);
+        //localStorage.setItem("token", result.token);
+        ///localStorage.setItem("user", data.username);
+        //console.log(localStorage.getItem("token"));
+        // console.log(localStorage.getItem("user"));
         // Aquí puedes manejar el resultado como necesites, por ejemplo:
         // - Guardar el token en el estado o en el almacenamiento local
         // - Redirigir al usuario a otra página
