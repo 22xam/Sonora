@@ -7,6 +7,8 @@ import ListAlbums from "../components/Albums/ListAlbums.jsx";
 import HeaderAlbums from "../components/Albums/HeaderAlbums.jsx";
 import Logout from "../components/Login/Logout.jsx";
 import ModalcreateAlbums from "../components/Albums/ModalcreateAlbums.jsx";
+import ListSongs from "../components/Songs/ListSongs.jsx";
+import Carousel from "../components/Decoradores/Carousel.jsx";
 
 const Router = createBrowserRouter([
   {
@@ -14,7 +16,12 @@ const Router = createBrowserRouter([
     children: [
       {
         index: true, // path: "/"
-        element: <MainPage />,
+        element: (
+          <>
+            <MainPage />
+            <Carousel />
+          </>
+        ),
       },
       {
         path: "Albums",
@@ -47,7 +54,12 @@ const Router = createBrowserRouter([
       },
       {
         path: "songs",
-        element: <ListAlbums />,
+
+        element: (
+          <ProtectedRoute>
+            <ListSongs />
+          </ProtectedRoute>
+        ),
       },
       {
         path: "profile",
