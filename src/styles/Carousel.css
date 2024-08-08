@@ -1,0 +1,60 @@
+ul,
+li {
+  list-style: none;
+  white-space: nowrap;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: inline-block;
+  width: 25%; /* Mostrar cuatro imágenes por fila */
+  box-sizing: border-box; /* Asegura que el padding y border se incluyan en el ancho total */
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Main container */
+.main-container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* Slider container */
+.slider-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* dots carrusel */
+.dots-container {
+  display: flex;
+  justify-content: center;
+}
+
+.dot-container-item {
+  margin: 8px 3px;
+  cursor: pointer;
+  font-size: 12px;
+  text-align: center;
+}
+
+.container-images {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  overflow: hidden; /* Asegura que no haya desbordamiento */
+}
+
+div.active {
+  background: #ccc;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
