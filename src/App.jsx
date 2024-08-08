@@ -13,6 +13,7 @@ import "./styles/ListAlbums.css";
 import "./styles/CardSongs.css";
 import "./styles/ListSongs.css";
 import "./styles/Carousel.css";
+import "./styles/Fondo.css";
 
 function App() {
   return (
