@@ -1,4 +1,3 @@
-
 :root{
   --color-principal:#591414;
   --color-secundario:#8C1111;
@@ -12,19 +11,20 @@
 }
 
 
-
-
 .album-card {
-  background-color: #fff;
-  width: 80%;
+  background: linear-gradient(to right, var(--color-apuesto), var(--color-principal));
+  width: 95%;
   position:relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   border-radius: 10px;
   padding: 30px 20px;
-  border: 1px solid #ccc;
+  border: 5px solid var(--color-apuesto);
   margin: 20px 0;
+  box-shadow: 0px 8px 16px rgba(0.2, 0.2, 0.5, 1);
+  max-height: 400px; 
+  overflow: hidden;
 }
 
 .position {
@@ -40,10 +40,11 @@
 }
 
 .details {
-  display: flexbox;
+  display: flex;
   flex-direction:column;
-
   flex-grow: 1;
+  overflow-y: auto; 
+  max-height: 100%
 }
 
 .artist {
@@ -54,22 +55,26 @@
   font-size: 1.6rem;
   font-weight: bold;
   margin-bottom: 5px;
-
+  color: var(--color-letra-pricipal)
 }
 
 .album-card .details .bio {
   font-size: 1rem;
   font-weight: 400;
-  font-family: 'Heebo', sans-serif;
+  font-family: 'Trebuchet MS', Helvetica, sans-serif;
   padding: 5px 0px;
   text-align: start;
+  
 }
+
+
+/* Botones dentro de la tarjeta*/
 
 .botones-albums {
   margin-top: 15px;
   display:inline-flex;
-  align-items:flex-end;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .botones-albums .btn-abrir {

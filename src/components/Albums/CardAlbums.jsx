@@ -1,4 +1,3 @@
-import React from "react";
 import { format } from "date-fns";
 import ArtistField from "../Artist/ArtistField";
 import "./CardAlbums.css";
@@ -24,6 +23,7 @@ function CardAlbums({
   artist,
   owner,
 }) {
+  
   return (
     <div className="album-card">
       <img

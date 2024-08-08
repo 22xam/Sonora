@@ -45,29 +45,31 @@ export default function ListSongs() {
     }, [page]);
 
     return (
-        <div>
-            <div className="list-songs">
-                <h2 className="title song-list-title">Lista de Canciones</h2>
-                <ul className = "song-list">
-                    {songs.map((song) => (
-                        <li key={song.id} className="song-item">
-                            <CardSongs song={song} className="card-songs-gradient" />
-                        </li>
-                    ))}
-                </ul>
-                <div className="button-container">
-                {isLoading && <p className = "loading-text">Cargando más canciones...</p>}
-                {nextURL && !isLoading && (
-                        <button
-                            className="button"
-                            onClick={handleLoadMore}
-                        >
-                            Mostrar más canciones
-                        </button>
-                )}
-                {isError && <p>Error al cargar las canciones.</p>}
+        <section className="fondo">
+            <div > 
+                <div className="list-songs">
+                    <h2 className="title song-list-title">Lista de Canciones</h2>
+                    <ul className = "song-list">
+                        {songs.map((song) => (
+                            <li key={song.id} className="song-item">
+                                <CardSongs song={song} className="card-songs-gradient" />
+                            </li>
+                        ))}
+                    </ul>
+                    <div className="button-container">
+                    {isLoading && <p className = "loading-text">Cargando más canciones...</p>}
+                    {nextURL && !isLoading && (
+                            <button
+                                className="button"
+                                onClick={handleLoadMore}
+                            >
+                                Mostrar más canciones
+                            </button>
+                    )}
+                    {isError && <p>Error al cargar las canciones.</p>}
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 }
