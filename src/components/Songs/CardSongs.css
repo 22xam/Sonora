@@ -1,0 +1,82 @@
+:root{
+    --color-principal:#591414;
+    --color-secundario:#8C1111;
+    --color-terciario:#A6242F;
+    --color-negro:#0D0908;
+    --color-alternativo-I:#7D6841;
+    --color-alternativo-II:#3045BF;
+    --color-apuesto:#145959;
+    --color-fondo:#E7E1E1;
+    --color-letra-pricipal: #fff;
+  }
+  
+  
+
+.song-card {
+    background: linear-gradient(to right, var(--color-principal), var(--color-apuesto));
+    width: 80%;
+    position:relative;
+    display: flexbox;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    padding: 30px 20px;
+    border: 5px solid var(--color-apuesto);
+    margin: 20px 0;
+    box-shadow: 0px 8px 16px rgba(0.2, 0.2, 0.5, 1);
+
+  }
+  
+.position {
+    font-size: 24px;
+    margin-right: 20px;
+  }
+  
+.title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: var(--color-negro);
+  
+  }
+
+.song-name{
+  font-family: 'Trebuchet MS', Helvetica, sans-serif; 
+  font-size: 1.3rem;
+  color: var(--color-letra-pricipal); 
+  text-align: center; 
+  font-weight: bold; 
+  font-style: italic;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual tamaño */
+  gap: 20px; /* Espacio entre las tarjetas */
+  margin: 20px; /* Margen alrededor del contenedor */
+}
+
+.audio-player {
+  width: 100%;
+}
+
+audio {
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

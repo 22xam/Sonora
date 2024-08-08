@@ -17,8 +17,8 @@ function HeaderBar() {
             </a>
           </li>
           <li className="menu_item">
-            <a href="#Nosotros" className="menu_link">
-              Nosotros
+            <a href="songs" className="menu_link">
+              Canciones
             </a>
           </li>
           <li className="menu_item menu_item_show">
