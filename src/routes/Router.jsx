@@ -9,6 +9,7 @@ import Logout from "../components/Login/Logout.jsx";
 import ModalcreateAlbums from "../components/Albums/ModalcreateAlbums.jsx";
 import ListSongs from "../components/Songs/ListSongs.jsx";
 import Carousel from "../components/Decoradores/Carousel.jsx";
+import HeaderBar from "../components/HeaderBar/HeaderBar.jsx";
 
 const Router = createBrowserRouter([
   {
