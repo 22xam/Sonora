@@ -1,6 +1,6 @@
 import HeaderBar from "./components/HeaderBar";
 import FooterBar from "./components/FooterBar";
-import Carousel from "./components/Carousel";
+import Carousel from "./components/Decoradores/Carousel";
 import ListSongs from "./components/ListSongs";
 
 

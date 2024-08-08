@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import CardSongs from "./CardSongs";
+import "./ListSongs.css";
 
 export default function ListSongs() {
     const [page, setPage] = useState(1);
