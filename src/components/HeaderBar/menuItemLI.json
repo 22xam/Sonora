@@ -1,0 +1,28 @@
+[
+    {
+      "path": "Albums/List",
+      "label": "Albums",
+      "icon": "lab la-album"
+    },
+    {
+      "path": "songs",
+      "label": "Canciones",
+      "icon": "lab la-music"
+    },
+    {
+      "path": "artist",
+      "label": "Artista",
+      "icon": "lab la-user-tie"
+    },
+    {
+      "path": "profile",
+      "label": "Perfil",
+      "icon": "lab la-user"
+    },
+    {
+      "path": "logout",
+      "label": "Cerrar Sesión",
+      "icon": "lab la-sign-out-alt"
+    }
+  ]
+  

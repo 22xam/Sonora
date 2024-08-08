@@ -1,6 +1,14 @@
 import "./HeaderBar.css";
+import MenuItem from "./MenuItem.jsx";
+import { useAuth } from "../contexts/AuthContext.jsx";
+import menuItemLO from "./menuItemLO.json";
+import menuItemLI from "./menuItemLI.json";
 
 function HeaderBar() {
+  const { isAuthenticated } = useAuth("state");
+
+  const menuItems = isAuthenticated ? menuItemLI : menuItemLO;
+
   return (
     <header>
       <nav className="menu_container">
@@ -11,31 +19,14 @@ function HeaderBar() {
         </section>
 
         <ul className="menu_links">
-          <li className="menu_item">
-            <a href="Albums/List" className="menu_link">
-              Albums
-            </a>
-          </li>
-          <li className="menu_item">
-            <a href="songs" className="menu_link">
-              Canciones
-            </a>
-          </li>
-          <li className="menu_item menu_item_show">
-            <a href="#Sistema" className="menu_link menu_arrow">
-              A cerca des
-            </a>
-          </li>
-          <li className="menu_item menu_item_show">
-            <a href="#Desarrolladores" className="menu_link menu_arrow">
-              Desarrolladores
-            </a>
-          </li>
-          <li className="menu_item">
-            <a href="login" className="menu_link">
-              Iniciar sesion
-            </a>
-          </li>
+          {menuItems.map((item, index) => (
+            <MenuItem
+              key={index}
+              path={item.path}
+              label={item.label}
+              icon={item.icon}
+            />
+          ))}
         </ul>
 
         <div className="menu_hamburguer">
