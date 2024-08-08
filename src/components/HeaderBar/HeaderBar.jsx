@@ -12,6 +12,11 @@ function HeaderBar() {
 
         <ul className="menu_links">
           <li className="menu_item">
+            <a href="Albums/List" className="menu_link">
+              Albums
+            </a>
+          </li>
+          <li className="menu_item">
             <a href="#Nosotros" className="menu_link">
               Nosotros
             </a>

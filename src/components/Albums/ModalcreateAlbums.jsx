@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import ArtistSelector from "./ArtistSelector";
+import ArtistSelector from "../Artist/ArtistSelector.jsx";
 
 function ModalCreateAlbums() {
   const [title, setTitle] = useState("");

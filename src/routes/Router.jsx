@@ -3,6 +3,10 @@ import Layout from "./Layout.jsx";
 import ProtectedRoute from "./ProtectRouter.jsx";
 import MainPage from "../components/MainPage.jsx";
 import Auth from "../components/Login/Auth.jsx";
+import ListAlbums from "../components/Albums/ListAlbums.jsx";
+import HeaderAlbums from "../components/Albums/HeaderAlbums.jsx";
+import Logout from "../components/Login/Logout.jsx";
+import ModalcreateAlbums from "../components/Albums/ModalcreateAlbums.jsx";
 
 const Router = createBrowserRouter([
   {
@@ -13,17 +17,25 @@ const Router = createBrowserRouter([
         element: <MainPage />,
       },
       {
-        path: "articles",
+        path: "Albums",
         children: [
           {
             index: true,
-            element: <h1>Articulos</h1>,
+            element: <HeaderAlbums />,
           },
           {
-            path: "add",
+            path: "List",
             element: (
               <ProtectedRoute>
-                <h5>Ruta protegida</h5>
+                <ListAlbums />
+              </ProtectedRoute>
+            ),
+          },
+          {
+            path: "Create",
+            element: (
+              <ProtectedRoute>
+                <ModalcreateAlbums />
               </ProtectedRoute>
             ),
           },
@@ -35,13 +47,14 @@ const Router = createBrowserRouter([
       },
       {
         path: "songs",
-        element: <h5>Aqui canciones</h5>,
+        element: <ListAlbums />,
       },
       {
         path: "profile",
         element: (
           <ProtectedRoute>
             <h5>Ruta protegida perfil</h5>
+            <Logout />
           </ProtectedRoute>
         ),
       },

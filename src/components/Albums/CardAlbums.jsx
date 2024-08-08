@@ -1,6 +1,7 @@
 import React from "react";
 import { format } from "date-fns";
 import ArtistField from "../Artist/ArtistField";
+import "./CardAlbums.css";
 
 function formatDate(dateString) {
   try {

@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import CardAlbums from "./CardAlbums";
+import HeaderAlbums from "./HeaderAlbums";
+import "../Albums/ListAlbums.css";
 
 const ListAlbums = () => {
   const [albums, setAlbums] = useState([]);
@@ -37,6 +39,7 @@ const ListAlbums = () => {
 
   return (
     <>
+      <HeaderAlbums />
       <section className="list-albums">
         <div className="album-list">
           {albums.map((album) => (
