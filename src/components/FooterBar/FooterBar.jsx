@@ -1,3 +1,5 @@
+import "./FooterBar.css";
+
 function FooterBar() {
   return (
     <div>
