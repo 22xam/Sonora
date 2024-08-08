@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import './CardSong.css';
 
 
 function CardSong({ song }) {

@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { data } from '/src/assets/data.js';
-import '../styles/Carousel.css';
+import './Carousel.css';
 
 const Carousel = () => {
   const listRef = useRef();
