@@ -1,10 +1,9 @@
-main {
+.fondo {
     flex-grow: 1;
     background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(/src/assets/banner-1.jpg);
-   /* background: radial-gradient(circle, rgb(82, 51, 43) 0%, rgba(166,138,86,1) 100%);*/
     min-height: 90vh;
-    display: grid;
-    place-content: center;
     overflow: hidden;
     padding: 20px 0px;
+    display: flex;
+    flex-direction: column;
 }

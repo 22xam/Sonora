@@ -1,11 +1,24 @@
-.list-songs {
+:root{
+    --color-principal:#591414;
+    --color-secundario:#8C1111;
+    --color-terciario:#A6242F;
+    --color-negro:#0D0908;
+    --color-alternativo-I:#7D6841;
+    --color-alternativo-II:#3045BF;
+    --color-apuesto:#145959;
+    --color-fondo:#E7E1E1;
+    --color-letra-pricipal: #fff;
+}
+
+.albums-list {
     display: flex;
-    background-color: var(--color-fondo);
+    background-color: transparent;
     flex-direction: column;
     align-items: center;
     justify-content:center ;
     padding: 10px 20px;
 }
+
 .bar-title { 
     display: grid;
     place-items: center;
@@ -18,5 +31,60 @@
     
 
 .my-5 {
-    background-color: azure;
+    background-color: var(--color-fondo);
+    padding: 10px 20px;
+}
+
+.album-list-title {
+    font-family: 'Trebuchet MS', Helvetica, sans-serif; 
+    font-size: 2.5rem;
+    color: var(--color-letra-pricipal); 
+    text-align: center; 
+    font-weight: bold; 
+    font-style: italic;
+    text-shadow: 4px 4px 8px rgba(0.3, 0.3, 0.3, 0.5);
+}
+
+.fondo {
+    flex-grow: 1;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(/src/assets/banner-1.jpg);
+    min-height: 90vh;
+    overflow: hidden;
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.album-list-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0;
+    list-style: none;
+}
+
+@media (min-width: 768px) {
+    .album-list-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.album-list-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0;
+    list-style: none;
+}
+
+@media (min-width: 768px) {
+    .album-list-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.loading-text {
+    margin-bottom: 10px; 
+    font-size: 1rem; 
+    color: var(--color-letra-pricipal); 
 }

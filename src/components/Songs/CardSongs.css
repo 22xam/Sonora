@@ -14,7 +14,7 @@
 
 .song-card {
     background: linear-gradient(to right, var(--color-principal), var(--color-apuesto));
-    width: 80%;
+    width: 95%;
     position:relative;
     display: flexbox;
     align-items: center;
@@ -36,7 +36,7 @@
     font-size: 1.6rem;
     font-weight: bold;
     margin-bottom: 5px;
-    color: var(--color-negro);
+    color: var(--color-letra-pricipal);
   
   }
 
@@ -51,9 +51,9 @@
 
 .card-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual tamaño */
-  gap: 20px; /* Espacio entre las tarjetas */
-  margin: 20px; /* Margen alrededor del contenedor */
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 20px; 
+  margin: 20px; 
 }
 
 .audio-player {
