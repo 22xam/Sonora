@@ -1,0 +1,23 @@
+[
+    {
+      "path": "#Nosotros",
+      "label": "Nosotros",
+      "icon": ""
+    },
+    {
+      "path": "#SobreSonora",
+      "label": "UPATECO",
+      "icon": ""
+    },
+    {
+      "path": "#contactos",
+      "label": "Sobre",
+      "icon": ""
+    },
+    {
+      "path": "login",
+      "label": "Inicio",
+      "icon": ""
+    }
+  ]
+  
