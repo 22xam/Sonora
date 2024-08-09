@@ -1,6 +1,10 @@
 import "../styles/mainPage.css";
+import { useAuth } from "./contexts/AuthContext.jsx";
 
 function MainPage() {
+  const { isAuthenticated } = useAuth("state");
+  const { user } = localStorage.getItem("user");
+
   return (
     <section className="banner">
       <article>
@@ -11,7 +15,11 @@ function MainPage() {
           Encuentra la banda sonora perfecta para cada momento.
         </p>
         <div className="btn-login">
-          <a href="login"> Ingresa a SONARA</a>
+          {isAuthenticated ? (
+            <a href="/profile"> Bienvenido {user} </a>
+          ) : (
+            <a href="/login"> Ingresa a SONARA</a>
+          )}
         </div>
       </article>
     </section>

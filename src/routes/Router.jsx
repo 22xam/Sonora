@@ -10,6 +10,9 @@ import ModalcreateAlbums from "../components/Albums/ModalcreateAlbums.jsx";
 import ListSongs from "../components/Songs/ListSongs.jsx";
 import Carousel from "../components/Decoradores/Carousel.jsx";
 import HeaderBar from "../components/HeaderBar/HeaderBar.jsx";
+import ListArtist from "../components/Artist/ListArtists.jsx";
+import CreateArtist from "../components/Artist/CreateArtist.jsx";
+import HeaderArtist from "../components/Artist/HeaderArtist.jsx";
 
 const Router = createBrowserRouter([
   {
@@ -63,10 +66,34 @@ const Router = createBrowserRouter([
         ),
       },
       {
+        path: "Artist",
+        children: [
+          {
+            index: true,
+            element: <HeaderArtist />,
+          },
+          {
+            path: "List",
+            element: (
+              <ProtectedRoute>
+                <ListArtist />
+              </ProtectedRoute>
+            ),
+          },
+          {
+            path: "Create",
+            element: (
+              <ProtectedRoute>
+                <CreateArtist />
+              </ProtectedRoute>
+            ),
+          },
+        ],
+      },
+      {
         path: "profile",
         element: (
           <ProtectedRoute>
-            <h5>Ruta protegida perfil</h5>
             <Logout />
           </ProtectedRoute>
         ),
