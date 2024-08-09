@@ -31,16 +31,12 @@ function Auth() {
         alert("Inicio de sesión exitoso");
         login(result.token);
         //localStorage.setItem("token", result.token);
-        ///localStorage.setItem("user", data.username);
+        localStorage.setItem("user", data.username);
         //console.log(localStorage.getItem("token"));
-        // console.log(localStorage.getItem("user"));
-        // Aquí puedes manejar el resultado como necesites, por ejemplo:
-        // - Guardar el token en el estado o en el almacenamiento local
-        // - Redirigir al usuario a otra página
+        console.log(localStorage.getItem("user"));
       } else {
         console.error("Error en el inicio de sesión", response.statusText);
         alert("Error en el inicio de sesión");
-        // Aquí puedes manejar el error de inicio de sesión, por ejemplo:
         // - Mostrar un mensaje de error al usuario
       }
     } catch (error) {

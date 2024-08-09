@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import ArtistSelector from "../Artist/ArtistSelector.jsx";
+import ArtistSearch from "../Artist/ArtistSearch.jsx";
 import "./Modalcreatealbums.css";
 
 function ModalCreateAlbums() {
@@ -11,6 +12,9 @@ function ModalCreateAlbums() {
   const handleTitleChange = (event) => setTitle(event.target.value);
   const handleYearChange = (event) => setYear(event.target.value);
   const handleArtistChange = (selectedId) => setArtistId(selectedId);
+  const handleArtistSelect = (artistId) => {
+    console.log("Artista seleccionado con ID:", artistId);
+  };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -47,6 +51,7 @@ function ModalCreateAlbums() {
           </div>
           <form onSubmit={handleSubmit}>
             <div>
+
               <div className="titulos">
                 <label htmlFor="title">Nombre del álbum</label>
                 <input
@@ -71,6 +76,7 @@ function ModalCreateAlbums() {
               <div className="button-container">
                 <button type="submit">Agregar Álbum</button>
               </div>
+
             </div>
           </form>
         </article>

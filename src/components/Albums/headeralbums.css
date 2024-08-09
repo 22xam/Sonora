@@ -61,6 +61,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     color: var(--color-letra-pricipal);
+
 }
 
 .header-albums-card-create .header-albums-btn-create {
