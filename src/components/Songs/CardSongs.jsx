@@ -16,6 +16,11 @@ function CardSong({ song }) {
             El navegador no soporta el elemento de audio.
           </audio>
         </div>
+        <div className="botones-songs">
+          <label className="btn-eliminar">
+            Eliminar <i className="las la-trash"></i>
+          </label>
+        </div>
       </div>
     </div>
   );
