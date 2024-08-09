@@ -9,13 +9,12 @@ function HeaderAlbums() {
       <section className="header-albums-card-create">
         <img src="../src/assets/albums.jpg" alt="nuevo-albums" />
         <p>
-          ¡Deja que tu música hable por ti! Agrega un álbum, comparte tus gustos,
-          emociones y conectate con el mundo. Es tu momento de mostrar lo que te gusta.
+          ¡Deja que tu música hable por ti! Agrega un álbum, comparte tus
+          gustos, emociones y conectate con el mundo. Es tu momento de mostrar
+          lo que te gusta.
         </p>
         <a href="/Albums/create">
-          <label className="header-albums-btn-create">
-            Agregar
-          </label>
+          <label className="header-albums-btn-create">Agregar</label>
         </a>
       </section>
     </section>

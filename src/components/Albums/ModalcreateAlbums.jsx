@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import ArtistSelector from "../Artist/ArtistSelector.jsx";
 import ArtistSearch from "../Artist/ArtistSearch.jsx";
-import "./Modalcreatealbums.css";
+import "./modalcreatealbums.css";
 
 function ModalCreateAlbums() {
   const [title, setTitle] = useState("");
@@ -51,7 +51,6 @@ function ModalCreateAlbums() {
           </div>
           <form onSubmit={handleSubmit}>
             <div>
-
               <div className="titulos">
                 <label htmlFor="title">Nombre del álbum</label>
                 <input
@@ -76,7 +75,6 @@ function ModalCreateAlbums() {
               <div className="button-container">
                 <button type="submit">Agregar Álbum</button>
               </div>
-
             </div>
           </form>
         </article>
