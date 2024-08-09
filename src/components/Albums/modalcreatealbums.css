@@ -19,7 +19,7 @@
     background-color: transparent;
 }
 
-article {
+.fondo .crear-album article {
     background: linear-gradient(to right, var(--color-apuesto), var(--color-principal));
     color: var(--color-letra-pricipal);
     padding: 20px 20px;
@@ -30,7 +30,7 @@ article {
     width: 130%;
 }
 
-h2 {
+.titulo-agregar {
     font-family: 'Trebuchet MS', Helvetica, sans-serif; 
     font-size: 2.5rem;
     text-align: center;
@@ -93,7 +93,7 @@ input[type="number"] {
     justify-content: center;
 }
 
-button {
+.boton-agregar-albun{
     background-color: var(--color-principal);
     color: var(--color-letra-pricipal);
     padding: 10px;
@@ -107,7 +107,7 @@ button {
     box-shadow: 0px 8px 16px rgba(0.2, 0.2, 0.5, 1);
 }
 
-button:hover {
+.boton-agregar-albun:hover {
     background-color: var(--color-terciario);
 }
 
