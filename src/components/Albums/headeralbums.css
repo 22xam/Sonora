@@ -60,6 +60,7 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+    color: var(--color-letra-pricipal);
 }
 
 .header-albums-card-create .header-albums-btn-create {
@@ -72,6 +73,8 @@
     text-align: center;
     border-radius: 10px;
     cursor: pointer;
+    box-shadow: 0px 8px 16px rgba(0.2, 0.2, 0.5, 1);
+    border: 2px solid var(--color-principal);
 }
 
 .header-albums-card-create .header-albums-btn-create:hover {
