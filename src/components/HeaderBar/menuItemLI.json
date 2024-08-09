@@ -1,6 +1,6 @@
 [
     {
-      "path": "Albums/List",
+      "path": "/Albums/List",
       "label": "Albums",
       "icon": "lab la-album"
     },
