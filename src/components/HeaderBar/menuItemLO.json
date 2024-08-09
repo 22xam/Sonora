@@ -15,7 +15,7 @@
       "icon": ""
     },
     {
-      "path": "login",
+      "path": "/login",
       "label": "Inicio",
       "icon": ""
     }

@@ -1,26 +1,26 @@
 [
     {
-      "path": "Albums/List",
+      "path": "/Albums/List",
       "label": "Albums",
       "icon": "lab la-album"
     },
     {
-      "path": "songs",
+      "path": "/songs",
       "label": "Canciones",
       "icon": "lab la-music"
     },
     {
-      "path": "artist",
+      "path": "/artist",
       "label": "Artista",
       "icon": "lab la-user-tie"
     },
     {
-      "path": "profile",
+      "path": "/profile",
       "label": "Perfil",
       "icon": "lab la-user"
     },
     {
-      "path": "logout",
+      "path": "/logout",
       "label": "Cerrar Sesión",
       "icon": "lab la-sign-out-alt"
     }

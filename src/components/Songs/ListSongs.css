@@ -19,6 +19,7 @@
     justify-content:center ;
     padding: 10px 20px;
 }
+
 .bar-title { 
     display: grid;
     place-items: center;
@@ -36,6 +37,19 @@
     padding: 10px 20px;
 }
 
+.button{
+    background: linear-gradient(to right, var(--color-apuesto), var(--color-principal));
+    width: 95%;
+    position:relative;
+    display: flexbox;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    padding: 20px 20px;
+    border: 5px solid var(--color-apuesto);
+    margin: 20px 0;
+    box-shadow: 0px 8px 16px rgba(0.2, 0.2, 0.5, 1);
+}
 
 .album-list-grid {
     display: grid;

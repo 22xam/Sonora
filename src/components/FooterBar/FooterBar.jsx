@@ -27,7 +27,7 @@ function FooterBar() {
           <a href="#">
             <i className="las la-play"></i> Bulma
           </a>
-          <a href="#">Institutción UPATECO</a>
+          <a href="#">UPATECO</a>
         </section>
         <section className="section-footer">
           <h3>SONORA</h3>
