@@ -10,7 +10,9 @@
       "icon": "lab la-music"
     },
     {
+
       "path": "/artist/List",
+
       "label": "Artista",
       "icon": "lab la-user-tie"
     },
@@ -20,8 +22,10 @@
       "icon": "lab la-user"
     },
     {
+
       "path": "",
       "label": "Cerrar",
+
       "icon": "lab la-sign-out-alt"
     }
   ]

@@ -2,6 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import ArtistSelector from "../Artist/ArtistSelector.jsx";
 import ArtistSearch from "../Artist/ArtistSearch.jsx";
+import "./Modalcreatealbums.css";
 
 function ModalCreateAlbums() {
   const [title, setTitle] = useState("");
@@ -42,41 +43,44 @@ function ModalCreateAlbums() {
   };
 
   return (
-    <section>
-      <article>
-        <div>
-          <h2>Crear un nuevo álbum</h2>
-        </div>
-        <form onSubmit={handleSubmit}>
+    <section className="fondo">
+      <div className="crear-album">
+        <article>
           <div>
-            <div>
-              <label htmlFor="title">Nombre del álbum</label>
-              <input
-                type="text"
-                id="title"
-                value={title}
-                onChange={handleTitleChange}
-              />
-            </div>
-            <div>
-              <label htmlFor="year">Año</label>
-              <input
-                type="number"
-                id="year"
-                value={year}
-                onChange={handleYearChange}
-              />
-            </div>
-            <div>
-              <ArtistSelector onArtistChange={handleArtistChange} />
-              <ArtistSearch onArtistSelect={handleArtistSelect} />
-            </div>
-            <div>
-              <button type="submit">Crear Álbum</button>
-            </div>
+            <h2>Agregar un nuevo álbum</h2>
           </div>
-        </form>
-      </article>
+          <form onSubmit={handleSubmit}>
+            <div>
+
+              <div className="titulos">
+                <label htmlFor="title">Nombre del álbum</label>
+                <input
+                  type="text"
+                  id="title"
+                  value={title}
+                  onChange={handleTitleChange}
+                />
+              </div>
+              <div className="titulos">
+                <label htmlFor="year">Año</label>
+                <input
+                  type="number"
+                  id="year"
+                  value={year}
+                  onChange={handleYearChange}
+                />
+              </div>
+              <div className="titulodespl">
+                <ArtistSelector onArtistChange={handleArtistChange} />
+              </div>
+              <div className="button-container">
+                <button type="submit">Agregar Álbum</button>
+              </div>
+
+            </div>
+          </form>
+        </article>
+      </div>
     </section>
   );
 }

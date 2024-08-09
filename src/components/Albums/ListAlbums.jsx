@@ -44,7 +44,6 @@ const ListAlbums = () => {
       <HeaderAlbums />
       <section className="fondo">
         <div className="album-list">
-          <h2 className="title album-list-title">Lista de Albumes</h2>
           <ul className="album-list-grid">
             {albums.map((album) => (
               <CardAlbums

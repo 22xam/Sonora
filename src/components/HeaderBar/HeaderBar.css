@@ -3,10 +3,13 @@
     --color-secundario:#8C1111;
     --color-terciario:#A6242F;
     --color-negro:#0D0908;
-    --color-crema:#3045BF;
+    --color-alternativo-I:#7D6841;
+    --color-alternativo-II:#3045BF;
+    --color-apuesto:#145959;
     --color-fondo:#E7E1E1;
     --color-letra-pricipal: #fff;
 }
+
 
 header{
     background-color: var(--color-principal);
@@ -29,11 +32,18 @@ header{
     font-weight: bold;
     text-decoration: none;
     color: var(--color-letra-pricipal);
+    display: flex;
     font-weight: bold;
 }
 
-.menu_logo a i{
-    margin-right: 5px;
+.menu_logo a .logo{
+    height: 50px;
+    margin-right: 10px;
+}
+
+.menu_logo a span {
+    font-size: 30px; 
+    font-weight: bold;
 }
 
 /*CONTENEDOR MENU*/
@@ -61,10 +71,13 @@ header{
     padding: 0px 20px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     height: 100%;
     align-items: center;
     font-weight: bold;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
 }
 
 .la-angle-down{
@@ -75,7 +88,7 @@ header{
 }
 
 .menu_link:hover{
-    background-color: var(--color-secundario);
+    background-color: var(--color-apuesto);
 }
 
 .menu_nesting{
@@ -95,7 +108,7 @@ header{
 }
 
 .menu_link_inside:hover{
-    background-color: var(--color-secundario);
+    background-color: var(--);
 }
 
 .menu_hamburguer{
@@ -138,7 +151,7 @@ header{
         top: 60px;
         bottom: 0;
         right: 0;
-        background-color: var(--color-secundario);
+        background-color: var(--color-principal);
         overflow-y: auto;
         display: grid;
         grid-auto-rows: max-content;
@@ -151,9 +164,10 @@ header{
     }
 
     .menu_link{
-        padding: 25px 30px;
+        padding: 25px 20px;
         display: flex;
         height: auto;
+        white-space: normal;
     }
 
     .menu_nesting{

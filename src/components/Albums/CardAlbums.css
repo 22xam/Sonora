@@ -64,6 +64,7 @@
   font-family: 'Trebuchet MS', Helvetica, sans-serif;
   padding: 5px 0px;
   text-align: start;
+  color: var(--color-letra-pricipal);
   
 }
 
