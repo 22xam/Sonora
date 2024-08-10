@@ -1,5 +1,3 @@
-import "../Albums/HeaderAlbums.css";
-
 function HeaderArtist() {
   return (
     <section className="header-albums">

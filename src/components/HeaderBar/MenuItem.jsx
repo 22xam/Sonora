@@ -9,9 +9,20 @@ function MenuItem({ path, label, icon }) {
   const handleClick = (e) => {
     if (label === "Cerrar") {
       e.preventDefault();
-      logout();
-      alert("Has cerrado sesión correctamente");
-      navigate("/");
+      swal({
+        title: "¿Seguro que quieres salir?",
+        text: "Se cerrará tu sesión actual.",
+        icon: "warning",
+        buttons: ["NO", "Si"],
+      }).then((respuesta) => {
+        if (respuesta) {
+          console.log(respuesta);
+          logout();
+          navigate("/");
+        } else {
+          navigate("/");
+        }
+      });
     }
   };
 

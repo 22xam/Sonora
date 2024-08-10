@@ -1,0 +1,49 @@
+/* src/components/ArtistListBox.css */
+.artist-listbox-container {
+  width:auto;
+  margin: 0 auto;
+}
+
+.listbox {
+  border: 1px solid #ccc;
+  height: 200px;
+  overflow-y: auto;
+  padding: 5px;
+  background-color: #f9f9f9;
+}
+
+.listbox-item {
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #ddd;
+  color:black;
+  font-size:medium;
+}
+
+.listbox-item:hover {
+  background-color: hsl(264, 29%, 93%);
+}
+
+.listbox-item.selected {
+  background-color: #d3d3d3;
+}
+
+.pagination-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.pagination-buttons button {
+  padding: 8px 16px;
+  cursor: pointer;
+  border: 1px solid #007bff;
+  background-color: #007bff;
+  color: white;
+}
+
+.pagination-buttons button:disabled {
+  background-color: #cccccc;
+  border: 1px solid #cccccc;
+  cursor: not-allowed;
+}
