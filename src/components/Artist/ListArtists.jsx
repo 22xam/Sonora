@@ -61,12 +61,14 @@ function ArtistList() {
     <div>
       <HeaderArtist />
       <section className="fondo">
-          <input
-            type="text"
-            placeholder="Busca aquí a tu artista preferido"
-            value={searchTerm}
-            onChange={handleSearchChange}
-          />
+          <div className= "barra-busqueda">
+            <input 
+              type="text"
+              placeholder="Busca aquí a tu artista preferido"
+              value={searchTerm}
+              onChange={handleSearchChange}
+            />
+          </div>
         
         <ul className="artist-list-grid">
           {filteredArtists.map((artist) => (
