@@ -1,0 +1,84 @@
+:root{
+    --color-principal:#591414;
+    --color-secundario:#8C1111;
+    --color-terciario:#A6242F;
+    --color-negro:#0D0908;
+    --color-alternativo-I:#7D6841;
+    --color-alternativo-II:#3045BF;
+    --color-apuesto:#145959;
+    --color-fondo:#E7E1E1;
+    --color-letra-pricipal: #fff;
+}
+
+
+.header-artist {
+    background: linear-gradient(to right, var(--color-apuesto), var(--color-principal));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-artist-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 10px 20px 10px;
+}
+
+.header-artist-title h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: bold;
+    color : var(--color-letra-pricipal)
+}
+
+.header-artist-card-create {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color:transparent;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.header-artist-card-create img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+}
+
+.header-artist-card-create p {
+    margin: 0px 30px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: 'Heebo', sans-serif;
+    text-align: center;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; 
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--color-letra-pricipal);
+
+}
+
+.header-artist-card-create .header-artist-btn-create {
+    text-decoration: none;
+    font-size: 1.2rem;
+    background-color: var(--color-apuesto);
+    color: var(--color-letra-pricipal);
+    padding: 10px 20px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0px 8px 16px rgba(0.2, 0.2, 0.5, 1);
+    border: 2px solid var(--color-principal);
+}
+
+.header-artist-card-create .header-artist-btn-create:hover {
+    background-color: var(--color-principal);
+    transition: 0.2s linear;
+}

@@ -1,20 +1,21 @@
-ul,
-li {
+.carousel-ul,
+.carousel-li {
   list-style: none;
   white-space: nowrap;
   padding: 0;
   margin: 0;
 }
 
-li {
+.carousel-li {
   display: inline-block;
   width: 25%; /* Mostrar cuatro imágenes por fila */
   box-sizing: border-box; /* Asegura que el padding y border se incluyan en el ancho total */
 }
 
-img {
+.carousel-img {
   width: 100%;
-  height: auto;
+  height: 500px;
+  object-fit: cover;
   display: block;
 }
 
@@ -24,6 +25,7 @@ img {
   max-width: 100%;
   margin: 0 auto;
   overflow: hidden;
+  background: transparent;
 }
 
 /* Slider container */
@@ -31,12 +33,14 @@ img {
   position: relative;
   width: 100%;
   overflow: hidden;
+  background: transparent;
 }
 
 /* dots carrusel */
 .dots-container {
   display: flex;
   justify-content: center;
+  background: transparent;
 }
 
 .dot-container-item {
@@ -44,17 +48,11 @@ img {
   cursor: pointer;
   font-size: 12px;
   text-align: center;
+  background: transparent;
 }
 
 .container-images {
   display: flex;
   transition: transform 0.5s ease-in-out;
   overflow: hidden; /* Asegura que no haya desbordamiento */
-}
-
-div.active {
-  background: #ccc;
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
 }

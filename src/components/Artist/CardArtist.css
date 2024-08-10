@@ -11,8 +11,8 @@
 }
 
 
-.album-card {
-  background: linear-gradient(to right, var(--color-apuesto), var(--color-principal));
+.artist-card {
+  background: linear-gradient(to right, var(--color-principal), var(--color-apuesto));
   width: 95%;
   position:relative;
   display: flex;
@@ -32,7 +32,7 @@
   margin-right: 20px;
 }
 
-.album-image {
+.artist-image {
   width: 160px;
   height: 160px;
   margin-right: 20px;
@@ -60,7 +60,7 @@
   color: var(--color-letra-pricipal);
 }
 
-.album-card .details .bio {
+.artist-card .details .bio {
   font-size: 1rem;
   font-weight: 400;
   font-family: 'Trebuchet MS', Helvetica, sans-serif;
@@ -71,6 +71,11 @@
 }
 
 .letras{
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: 'Trebuchet MS', Helvetica, sans-serif;
+  padding: 5px 0px;
+  text-align: start;
   color: var(--color-letra-pricipal);
 }
 
