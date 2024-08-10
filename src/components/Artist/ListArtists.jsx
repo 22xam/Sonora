@@ -61,15 +61,13 @@ function ArtistList() {
     <div>
       <HeaderArtist />
       <section className="fondo">
-          <div className= "barra-busqueda">
-            <input 
-              type="text"
-              placeholder="Busca aquí a tu artista preferido"
-              value={searchTerm}
-              onChange={handleSearchChange}
-            />
-          </div>
-        
+        <input
+          type="text"
+          placeholder="Busca aquí a tu artista preferido"
+          value={searchTerm}
+          onChange={handleSearchChange}
+        />
+
         <ul className="artist-list-grid">
           {filteredArtists.map((artist) => (
             <CardArtist
@@ -82,14 +80,21 @@ function ArtistList() {
           ))}
         </ul>
         <div className="control-paginas">
-          <button className="Ant-Sig" onClick={handlePreviousPage} disabled={!previousPage}>
+          <button
+            className="Ant-Sig"
+            onClick={handlePreviousPage}
+            disabled={!previousPage}
+          >
             Anterior
           </button>
-          <button className="Ant-Sig" onClick={handleNextPage} disabled={!nextPage}>
+          <button
+            className="Ant-Sig"
+            onClick={handleNextPage}
+            disabled={!nextPage}
+          >
             Siguiente
           </button>
         </div>
-        
       </section>
     </div>
   );

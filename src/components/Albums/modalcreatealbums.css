@@ -94,11 +94,11 @@ input[type="number"] {
 }
 
 .boton-agregar-albun{
-    background-color: var(--color-apuesto);
+    background-color: var(--color-principal);
     color: var(--color-letra-pricipal);
     padding: 10px;
     display: flex;
-    border: 3px solid var(--color-principal);
+    border: 2px solid var(--color-apuesto);
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
