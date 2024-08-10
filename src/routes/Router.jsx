@@ -16,7 +16,7 @@ import CreateArtist from "../components/Artist/CreateArtist.jsx";
 import HeaderArtist from "../components/Artist/HeaderArtist.jsx";
 
 import NotFound from "../components/NotFound/NotFound.jsx";
-
+import ArtistListBox from "../components/Artist/ArtistListBox.jsx";
 
 const Router = createBrowserRouter([
   {
@@ -106,10 +106,12 @@ const Router = createBrowserRouter([
         path: "*",
         element: <NotFound />,
       },
+      {
+        path: "prueba",
+        element: <ArtistListBox />,
+      },
     ],
-
   },
-  
 ]);
 
 export { Router };
