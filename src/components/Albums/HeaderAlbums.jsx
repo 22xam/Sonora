@@ -1,6 +1,18 @@
+import React, { useState } from "react";
+import AlbumForm from "./AlbumForm";
 import "./HeaderAlbums.css";
 
 function HeaderAlbums() {
+  const [isCreateMode, setIsCreateMode] = useState(false);
+
+  const handleAddClick = () => {
+    setIsCreateMode(true);
+  };
+
+  const handleCloseForm = () => {
+    setIsCreateMode(false);
+  };
+
   return (
     <section className="header-albums">
       <section className="header-albums-title">
@@ -17,6 +29,7 @@ function HeaderAlbums() {
           <label className="header-albums-btn-create">Agregar</label>
         </a>
       </section>
+      {isCreateMode && <AlbumForm onClose={handleCloseForm} />}
     </section>
   );
 }

@@ -64,6 +64,30 @@ const ListAlbums = () => {
       setCurrentPageUrl(previousPage);
     }
   };
+  // Funcion para recargar la lista
+  const refreshAlbumList = async () => {
+    try {
+      const response = await fetch(currentPageUrl, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        setAlbums(data.results);
+        setFilteredAlbums(data.results);
+        setNextPage(data.next);
+        setPreviousPage(data.previous);
+      } else {
+        console.error("Error al recuperar los álbumes:", response.statusText);
+      }
+    } catch (error) {
+      console.error("Error al recuperar los álbumes:", error);
+    }
+  };
 
   return (
     <>
@@ -88,6 +112,7 @@ const ListAlbums = () => {
                 cover={album.cover}
                 artist={album.artist}
                 owner={album.owner}
+                onAlbumUpdated={refreshAlbumList}
               />
             ))}
           </ul>
