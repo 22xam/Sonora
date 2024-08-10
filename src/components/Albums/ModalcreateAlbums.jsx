@@ -1,7 +1,8 @@
 import { useState } from "react";
 import axios from "axios";
-import ArtistSelector from "../Artist/ArtistSelector.jsx";
-import ArtistSearch from "../Artist/ArtistSearch.jsx";
+import ArtistListBox from "../Artist/ArtistListBox.jsx";
+import { useNavigate } from "react-router-dom";
+
 import "./ModalcreateAlbums.css";
 
 function ModalCreateAlbums() {
@@ -9,11 +10,14 @@ function ModalCreateAlbums() {
   const [year, setYear] = useState("");
   const [artistId, setArtistId] = useState(null);
 
+  const navigate = useNavigate();
+
   const handleTitleChange = (event) => setTitle(event.target.value);
   const handleYearChange = (event) => setYear(event.target.value);
-  const handleArtistChange = (selectedId) => setArtistId(selectedId);
-  const handleArtistSelect = (artistId) => {
-    console.log("Artista seleccionado con ID:", artistId);
+
+  const handleArtistSelect = (id) => {
+    setArtistId(id);
+    console.log("Artista seleccionado con ID:", id);
   };
 
   const handleSubmit = async (event) => {
@@ -35,10 +39,18 @@ function ModalCreateAlbums() {
           },
         }
       );
-      console.log("Albums creado:", response.data);
+      console.log("Álbum creado:", response.data);
+      swal({
+        title: "Albumn Creador con exito",
+        text: "Gracias por ser parte de la comunidad SONORA",
+        icon: "success",
+        buttons: "Aceptar",
+        timer: "2000",
+      });
+      navigate("/Albums/List");
     } catch (error) {
       console.error("Error al crear:", error.response.data.non_field_errors);
-      alert("Error creating album");
+      alert("Error al crear el álbum");
     }
   };
 
@@ -51,7 +63,6 @@ function ModalCreateAlbums() {
           </div>
           <form onSubmit={handleSubmit}>
             <div>
-
               <div className="titulos">
                 <label htmlFor="title">Nombre del álbum</label>
                 <input
@@ -59,6 +70,7 @@ function ModalCreateAlbums() {
                   id="title"
                   value={title}
                   onChange={handleTitleChange}
+                  required
                 />
               </div>
               <div className="titulos">
@@ -68,15 +80,18 @@ function ModalCreateAlbums() {
                   id="year"
                   value={year}
                   onChange={handleYearChange}
+                  required
                 />
               </div>
               <div className="titulodespl">
-                <ArtistSelector onArtistChange={handleArtistChange} />
-              </div>
-              <div className="button-container">
-                <button className= "boton-agregar-albun" type="submit">Agregar Álbum</button>
+                <ArtistListBox onArtistSelect={handleArtistSelect} />
               </div>
 
+              <div className="button-container">
+                <button className="boton-agregar-albun" type="submit">
+                  Agregar Álbum
+                </button>
+              </div>
             </div>
           </form>
         </article>

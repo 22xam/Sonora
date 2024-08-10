@@ -28,7 +28,13 @@ function Auth() {
       if (response.ok) {
         const result = await response.json();
         console.log("Inicio de sesión exitoso", result);
-        alert("Inicio de sesión exitoso");
+        swal({
+          title: "Bienvenido a Sonora",
+          text: "¡Prepárate para disfrutar de buena música!",
+          icon: "success",
+          buttons: "Aceptar",
+          timer: "2000",
+        });
         login(result.token);
         //localStorage.setItem("token", result.token);
         localStorage.setItem("user", data.username);
