@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import axios from "axios";
+import "./CreateArtist.css";
 
 function CreateArtist() {
   const [name, setName] = useState("");
@@ -69,41 +70,49 @@ function CreateArtist() {
   };
 
   return (
-    <div>
-      <h2>Crear Nuevo Artista</h2>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="name">Nombre</label>
-          <input
-            type="text"
-            id="name"
-            value={name}
-            onChange={handleNameChange}
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="bio">Biografía</label>
-          <textarea id="bio" value={bio} onChange={handleBioChange} required />
-        </div>
-        <div>
-          <label htmlFor="website">Sitio Web</label>
-          <input
-            type="text"
-            id="website"
-            value={website}
-            onChange={handleWebsiteChange}
-          />
-          {websiteError && <p style={{ color: "red" }}>{websiteError}</p>}
-        </div>
-        {error && <p style={{ color: "red" }}>{error}</p>}
-        <div>
-          <button type="submit" disabled={loading || websiteError}>
-            {loading ? "Creando..." : "Crear Artista"}
-          </button>
-        </div>
-      </form>
-    </div>
+    <section className="fondo">
+      <div className="agregar-artista">
+        <article>
+          <div>
+            <h2 className="titulo-agregar-artista">Agregar Nuevo Artista</h2>
+            <div>
+            <form onSubmit={handleSubmit}>
+              <div className="titulos">
+                <label htmlFor="name">Nombre del Artista</label>
+                <input
+                  type="text"
+                  id="name"
+                  value={name}
+                  onChange={handleNameChange}
+                  required
+                />
+              </div>
+              <div className="titulo-biog">
+                <label htmlFor="bio">Biografía</label>
+                <textarea id="bio" value={bio} onChange={handleBioChange} required />
+              </div>
+              <div className="titulos">
+                <label htmlFor="website">Sitio Web</label>
+                <input
+                  type="text"
+                  id="website"
+                  value={website}
+                  onChange={handleWebsiteChange}
+                />
+                {websiteError && <p style={{ color: "red" }}>{websiteError}</p>}
+              </div>
+              {error && <p style={{ color: "red" }}>{error}</p>}
+              <div className="button-container">
+                <button className="boton-agregar-artista" type="submit" disabled={loading || websiteError}>
+                  {loading ? "Agregando..." : "Agregar Artista"}
+                </button>
+              </div>
+            </form>
+            </div>
+          </div>
+        </article>
+      </div>  
+    </section>
   );
 }
 

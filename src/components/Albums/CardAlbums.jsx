@@ -35,21 +35,21 @@ function CardAlbums({
         <div className="title">
           <strong></strong> {title}
         </div>
-        <div>
-          <strong>Año:</strong> {year ? year : "N/A"}
+        <div className="letras">
+          <strong className="letras">Año: </strong> {year ? year : "N/A"}
         </div>
-        <div>
-          <strong>Artista:</strong>{" "}
+        <div >
+          <strong className="letras">Artista: </strong>{" "}
           <ArtistField artistId={artist} field="name" />
         </div>
         <div className="bio">
-          <strong>Biografia</strong>{" "}
+          <strong className="letras">Biografia </strong>{" "}
           <p>
             <ArtistField artistId={artist} field="bio" />
           </p>
         </div>
         <div>
-          <strong>Sitio Web:</strong>{" "}
+          <strong className="letras">Sitio Web: </strong>{" "}
           <ArtistField artistId={artist} field="website" />
         </div>
         <div className="botones-albums">

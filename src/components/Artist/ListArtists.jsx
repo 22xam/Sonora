@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import CardArtist from "./CardArtist.jsx";
 import HeaderArtist from "./HeaderArtist.jsx";
+import "./ListArtists.css";
 
 function ArtistList() {
   const [artists, setArtists] = useState([]);
@@ -59,32 +60,35 @@ function ArtistList() {
   return (
     <div>
       <HeaderArtist />
-      <h2>Lista de Artistas</h2>
-      <input
-        type="text"
-        placeholder="Buscar por nombre"
-        value={searchTerm}
-        onChange={handleSearchChange}
-      />
-      <div className="artist-list">
-        {filteredArtists.map((artist) => (
-          <CardArtist
-            key={artist.id}
-            name={artist.name}
-            bio={artist.bio}
-            image={artist.image}
-            website={artist.website}
+      <section className="fondo">
+          <input
+            type="text"
+            placeholder="Busca aquí a tu artista preferido"
+            value={searchTerm}
+            onChange={handleSearchChange}
           />
-        ))}
-      </div>
-      <div className="pagination-controls">
-        <button onClick={handlePreviousPage} disabled={!previousPage}>
-          Anterior
-        </button>
-        <button onClick={handleNextPage} disabled={!nextPage}>
-          Siguiente
-        </button>
-      </div>
+        
+        <ul className="artist-list-grid">
+          {filteredArtists.map((artist) => (
+            <CardArtist
+              key={artist.id}
+              name={artist.name}
+              bio={artist.bio}
+              image={artist.image}
+              website={artist.website}
+            />
+          ))}
+        </ul>
+        <div className="control-paginas">
+          <button className="Ant-Sig" onClick={handlePreviousPage} disabled={!previousPage}>
+            Anterior
+          </button>
+          <button className="Ant-Sig" onClick={handleNextPage} disabled={!nextPage}>
+            Siguiente
+          </button>
+        </div>
+        
+      </section>
     </div>
   );
 }

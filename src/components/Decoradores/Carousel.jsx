@@ -52,11 +52,11 @@ const Carousel = () => {
     <div className="main-container">
       <div className="slider-container">
         <div className="container-images" ref={listRef}>
-          <ul>
+          <ul className= "carousel-ul">
             {
               data.map((item) => {
-                return <li key={item.id}>
-                  <img src={item.imgUrl} alt={item.title} />
+                return <li className="carousel-li" key={item.id}>
+                  <img className="carousel-img" src={item.imgUrl} alt={item.title} />
                 </li>
               })
             }
