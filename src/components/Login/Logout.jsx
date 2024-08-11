@@ -7,9 +7,22 @@ function Logout() {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    logout();
-    alert("Has cerrado sesión correctamente");
-    navigate("/");
+    swal({
+      title: "¿Seguro que quieres salir?",
+      text: "Se cerrará tu sesión actual.",
+      icon: "warning",
+      buttons: ["NO", "Si"],
+    }).then((respuesta) => {
+      if (respuesta) {
+        console.log(respuesta);
+        logout();
+        navigate("/");
+      } else {
+        navigate("/perfil");
+      }
+    });
+    //navigate("/");
+
   };
 
   return (

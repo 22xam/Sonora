@@ -16,7 +16,7 @@
     padding: 20px;  
     border-radius: 10px;
     border: 5px solid var(--color-apuesto);
-    width: 90%;
+    width: 60%;
     max-width: 100%;
     position: relative;
     box-shadow: 0px 8px 16px rgba(0.2, 0.2, 0.5, 1);
@@ -40,7 +40,7 @@
 }
 
 .perfil-info p {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     font-weight: bold;
     margin-bottom: 25px;
     font-family: 'Trebuchet MS', Helvetica, sans-serif; 
@@ -73,7 +73,7 @@
     background-color: var(--color-terciario);
 }
 
-.perfil-cerrar-sesion {
+.boton-container-cerrarsesion {
     background-color: var(--color-apuesto);
     color: var(--color-letra-pricipal);
     padding: 10px;
@@ -88,7 +88,7 @@
     text-align: center;
 }
 
-.perfil-cerrar-sesion:hover {
+.boton-container-cerrarsesion:hover {
     background-color: var(--color-terciario);
 }
 
@@ -96,7 +96,7 @@
 .fondo {
     flex-grow: 1;
     background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(/src/assets/banner-1.jpg);
-    min-height: 60vh;
+    min-height: 70vh;
     overflow: hidden;
     padding: 0px 0px;
     display: flex;
