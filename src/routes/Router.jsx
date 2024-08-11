@@ -18,6 +18,7 @@ import HeaderArtist from "../components/Artist/HeaderArtist.jsx";
 import NotFound from "../components/NotFound/NotFound.jsx";
 import ArtistListBox from "../components/Artist/ArtistListBox.jsx";
 import Perfil from "../components/Perfil/Perfil.jsx";
+import AlbumDetail from "../components/Albums/AlbumDetail.jsx";
 
 const Router = createBrowserRouter([
   {
@@ -39,6 +40,7 @@ const Router = createBrowserRouter([
             index: true,
             element: <HeaderAlbums />,
           },
+          { path: ":id", element: <AlbumDetail /> },
           {
             path: "List",
             element: (
@@ -107,10 +109,6 @@ const Router = createBrowserRouter([
       {
         path: "*",
         element: <NotFound />,
-      },
-      {
-        path: "prueba",
-        element: <ArtistListBox />,
       },
     ],
   },

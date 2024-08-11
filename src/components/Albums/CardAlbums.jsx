@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { format } from "date-fns";
+import { useNavigate } from "react-router-dom";
 import ArtistField from "../Artist/ArtistField";
 import AlbumForm from "./AlbumForm";
 import "./CardAlbums.css";
@@ -26,7 +27,9 @@ function CardAlbums({
   onAlbumUpdated,
 }) {
   const [isEditMode, setIsEditMode] = useState(false);
-  const [isDeleted, setIsDeleted] = useState(false); // New state to manage deletion
+  const [isDeleted, setIsDeleted] = useState(false);
+
+  const navigate = useNavigate();
 
   const handleEditClick = () => {
     setIsEditMode(true);
@@ -80,8 +83,12 @@ function CardAlbums({
     });
   };
 
+  const handleOpenClick = () => {
+    navigate(`/Albums/${id}`, { state: { title, cover, year, artist } }); // Redirigir a AlbumDetail
+  };
+
   if (isDeleted) {
-    return null; // Render nothing if the album is deleted
+    return null;
   }
 
   return (
@@ -113,7 +120,7 @@ function CardAlbums({
           <ArtistField artistId={artist} field="website" />
         </div>
         <div className="botones-albums">
-          <label className="btn-abrir">
+          <label className="btn-abrir" onClick={handleOpenClick}>
             Abrir <i className="las la-comments"></i>
           </label>
           <label className="btn-editar" onClick={handleEditClick}>
