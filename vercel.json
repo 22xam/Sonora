@@ -1,7 +1,7 @@
 {
     "rewrites": [
-        { "source": "/api/(.*)", 
-        "destination": "http://sandbox.academiadevelopers.com/harmonyhub/$1"
+        { "source": "/(.*)", 
+        "destination": "/"
         }]
     
 }
