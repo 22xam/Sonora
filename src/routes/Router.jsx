@@ -99,8 +99,9 @@ const Router = createBrowserRouter([
         path: "Perfil",
         element: (
           <ProtectedRoute>
-            <Perfil />
             <Carousel />
+            <Perfil />
+            
           </ProtectedRoute>
         ),
       },
