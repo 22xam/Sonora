@@ -12,7 +12,7 @@ const AlbumForm = ({ albumId = null, onClose }) => {
   const [isEditMode, setIsEditMode] = useState(!!albumId);
   const [isLoading, setIsLoading] = useState(false);
 
-  const token = import.meta.env.VITE_API_TOKEN;
+  const token = localStorage.getItem("authToken");
   const apiUrl = "https://sandbox.academiadevelopers.com/harmonyhub/albums/";
 
   useEffect(() => {
@@ -21,7 +21,7 @@ const AlbumForm = ({ albumId = null, onClose }) => {
       fetch(`${apiUrl}${albumId}/`, {
         method: "GET",
         headers: {
-          Authorization: `Bearer ${token}`,
+          Authorization: `Token ${token}`,
         },
       })
         .then((response) => response.json())

@@ -4,7 +4,7 @@ import axios from "axios";
 const ArtistSelector = ({ onArtistChange }) => {
   const [artists, setArtists] = useState([]);
   const [selectedArtistId, setSelectedArtistId] = useState(null);
-  const { token } = import.meta.env.VITE_API_TOKEN;
+  const { token } = localStorage.getItem("authToken");
 
   useEffect(() => {
     const fetchArtists = async () => {
@@ -15,7 +15,7 @@ const ArtistSelector = ({ onArtistChange }) => {
             method: "GET",
             headers: {
               "Content-Type": "application/json",
-              Authorization: `Bearer ${token}`,
+              Authorization: `Token ${token}`,
             },
           }
         );

@@ -18,7 +18,7 @@ export const data = [
       id: 11, imgUrl: "src/assets/images/ROLLING.jpg"
     },
     {
-      id: 12, imgUrl: "src/assets/images/NIRVANA.jpg"
+      id: 12, imgUrl: "src/assets/images/NIRVANAa.jpg"
     },
     {
       id: 13, imgUrl: "src/assets/images/QUEEN.jpg"
@@ -29,5 +29,6 @@ export const data = [
     {
       id: 15, imgUrl: "src/assets/images/LENNY.jpg"
     },
+    
   ];
 

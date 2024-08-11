@@ -9,6 +9,8 @@ function CreateArtist() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [websiteError, setWebsiteError] = useState(null);
+  
+  const { token } = localStorage.getItem("authToken");
 
   const handleNameChange = (event) => setName(event.target.value);
   const handleBioChange = (event) => setBio(event.target.value);
@@ -51,7 +53,7 @@ function CreateArtist() {
         {
           headers: {
             "Content-Type": "application/json",
-            Authorization: "Token b309c840f86b9f63548c680f36c7e6ef1e62dc00",
+            Authorization: `Token ${localStorage.getItem("authToken")}`,
           },
         }
       );

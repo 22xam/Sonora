@@ -23,7 +23,7 @@ function ArtistListBox({ onArtistSelect }) {
       const response = await axios.get(currentPageUrl, {
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${import.meta.env.VITE_API_TOKEN}`,
+          Authorization: `Token ${localStorage.getItem("authToken")}`,
         },
       });
 
@@ -53,7 +53,7 @@ function ArtistListBox({ onArtistSelect }) {
 
   const handleArtistClick = (id) => {
     setSelectedArtistId(id);
-    onArtistSelect(id); // Asegúrate de que esta función sea llamada
+    onArtistSelect(id);
   };
 
   return (

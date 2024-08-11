@@ -12,7 +12,7 @@ const ListAlbums = () => {
   const [currentPageUrl, setCurrentPageUrl] = useState(
     import.meta.env.VITE_API_URL + "/harmonyhub/albums/"
   );
-  const { token } = import.meta.env.VITE_API_TOKEN;
+  const { token } = localStorage.getItem("authToken"); //import.meta.env.VITE_API_TOKEN;
 
   useEffect(() => {
     const fetchAlbums = async () => {

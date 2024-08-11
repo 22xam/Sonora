@@ -54,5 +54,5 @@
 .container-images {
   display: flex;
   transition: transform 0.5s ease-in-out;
-  overflow: hidden; /* Asegura que no haya desbordamiento */
+  overflow: hidden; /* verificar cambios */
 }

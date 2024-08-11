@@ -19,7 +19,7 @@ function ArtistList() {
       try {
         const response = await axios.get(currentPageUrl, {
           headers: {
-            Authorization: "Token b309c840f86b9f63548c680f36c7e6ef1e62dc00",
+          Authorization: `Token ${localStorage.getItem("authToken")}`,
           },
         });
         setArtists(response.data.results);
@@ -61,13 +61,15 @@ function ArtistList() {
     <div>
       <HeaderArtist />
       <section className="fondo">
-        <input
-          type="text"
-          placeholder="Busca aquí a tu artista preferido"
-          value={searchTerm}
-          onChange={handleSearchChange}
-        />
-
+          <div className= "barra-busqueda">
+            <input 
+              type="text"
+              placeholder="Busca aquí a tu artista preferido"
+              value={searchTerm}
+              onChange={handleSearchChange}
+            />
+          </div>
+        
         <ul className="artist-list-grid">
           {filteredArtists.map((artist) => (
             <CardArtist
@@ -80,21 +82,14 @@ function ArtistList() {
           ))}
         </ul>
         <div className="control-paginas">
-          <button
-            className="Ant-Sig"
-            onClick={handlePreviousPage}
-            disabled={!previousPage}
-          >
+          <button className="Ant-Sig" onClick={handlePreviousPage} disabled={!previousPage}>
             Anterior
           </button>
-          <button
-            className="Ant-Sig"
-            onClick={handleNextPage}
-            disabled={!nextPage}
-          >
+          <button className="Ant-Sig" onClick={handleNextPage} disabled={!nextPage}>
             Siguiente
           </button>
         </div>
+        
       </section>
     </div>
   );

@@ -7,7 +7,7 @@ function ArtistSearch({ onArtistSelect }) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  const { token } = import.meta.env.VITE_API_TOKEN;
+  const { token } = localStorage.getItem("authToken");
 
   useEffect(() => {
     if (searchTerm.length > 0) {
@@ -33,7 +33,7 @@ function ArtistSearch({ onArtistSelect }) {
         const response = await axios.get(nextPageUrl, {
           headers: {
             "Content-Type": "application/json",
-            Authorization: `Bearer ${token}`,
+            Authorization: `Token ${token}`,
           },
         });
 
@@ -57,8 +57,8 @@ function ArtistSearch({ onArtistSelect }) {
 
   const handleSelectSuggestion = (artistId, artistName) => {
     setSearchTerm(artistName);
-    setSuggestions([]); // Limpiar las sugerencias después de seleccionar
-    onArtistSelect(artistId); // Notifica al componente padre
+    setSuggestions([]); 
+    onArtistSelect(artistId); 
   };
 
   const handleSearch = (event) => {

@@ -2,13 +2,14 @@ import { useState } from "react";
 import axios from "axios";
 import ArtistListBox from "../Artist/ArtistListBox.jsx";
 import { useNavigate } from "react-router-dom";
-
 import "./ModalcreateAlbums.css";
 
 function ModalCreateAlbums() {
   const [title, setTitle] = useState("");
   const [year, setYear] = useState("");
   const [artistId, setArtistId] = useState(null);
+
+  const token = localStorage.getItem("authToken"); //import.meta.env.VITE_API_TOKEN;
 
   const navigate = useNavigate();
 
@@ -35,7 +36,7 @@ function ModalCreateAlbums() {
         {
           headers: {
             "Content-Type": "application/json",
-            Authorization: "Token b309c840f86b9f63548c680f36c7e6ef1e62dc00",
+            Authorization: `Token ${token}`,
           },
         }
       );
@@ -102,3 +103,4 @@ function ModalCreateAlbums() {
 }
 
 export default ModalCreateAlbums;
+/*ver comentarios*/
