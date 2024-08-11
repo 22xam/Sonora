@@ -93,12 +93,14 @@ const ListAlbums = () => {
     <>
       <HeaderAlbums />
       <section className="fondo">
+      <div className= "barra-busqueda">
         <input
           type="text"
           placeholder="Busca aquí tu álbum preferido"
           value={searchTerm}
           onChange={handleSearchChange}
         />
+      </div>
         <div className="album-list">
           <ul className="album-list-grid">
             {filteredAlbums.map((album) => (
