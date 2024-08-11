@@ -3,7 +3,7 @@ import { useAuth } from "./contexts/AuthContext.jsx";
 
 function MainPage() {
   const { isAuthenticated } = useAuth("state");
-  const { user } = localStorage.getItem("user");
+  // const { user } = localStorage.getItem("user");
 
   return (
     <section className="banner">
@@ -16,7 +16,7 @@ function MainPage() {
         </p>
         <div className="btn-login">
           {isAuthenticated ? (
-            <a href="/profile"> Bienvenido {user} </a>
+            <a href="/profile"> Estas en Sonora </a>
           ) : (
             <a href="/login"> Ingresa a SONARA</a>
           )}

@@ -69,7 +69,7 @@ function ArtistListBox({ onArtistSelect }) {
             onClick={() => handleArtistClick(artist.id)}
           >
             <span>{artist.name}</span>
-            <span className="id-listbox"> ID:  {artist.id}</span>
+            <span className="id-listbox"> ID: {artist.id}</span>
           </div>
         ))}
       </div>

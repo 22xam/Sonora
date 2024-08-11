@@ -87,7 +87,6 @@ function ModalCreateAlbums() {
               <div className="titulodespl">
                 <ArtistListBox onArtistSelect={handleArtistSelect} />
               </div>
-              
 
               <div className="button-container">
                 <button className="boton-agregar-albun" type="submit">
@@ -103,4 +102,3 @@ function ModalCreateAlbums() {
 }
 
 export default ModalCreateAlbums;
-/*ver comentarios*/
