@@ -1,10 +1,14 @@
-
 {
+    "rewrites": [
+        { "source": "/(.*)", 
+        "destination": "/"
+        }
+    ],
     "redirects": [
-    {
-        "source": "/(.*)",
-        "destination": "https://sonora-lovat.vercel.app/$1",
-        "permanent": true
-    }
+        {
+            "source": "/(.*)",
+            "destination": "https://sonora-lovat.vercel.app/$1",
+            "permanent": true
+        }
     ]
 }
