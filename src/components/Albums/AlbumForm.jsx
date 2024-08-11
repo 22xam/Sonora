@@ -85,8 +85,8 @@ const AlbumForm = ({ albumId = null, onClose }) => {
       .then((response) => response.json())
       .then((data) => {
         swal({
-          title: "La opereacion fue exitosa",
-          text: "La opereacion fue exitosa",
+          title: "La operación fue exitosa",
+          text: "La operación fue exitosa",
           icon: "success",
           timer: "3000",
         });
@@ -106,9 +106,9 @@ const AlbumForm = ({ albumId = null, onClose }) => {
         <span className="close" onClick={onClose}>
           &times;
         </span>
-        <h2>{isEditMode ? "Editar Álbum" : "Crear Álbum"}</h2>
+        <h2 className="tit-edit-album">{isEditMode ? "Editar Álbum" : "Crear Álbum"}</h2>
         <form onSubmit={handleSubmit}>
-          <div>
+          <div className="titulos">
             <label>Título:</label>
             <input
               type="text"
@@ -120,7 +120,7 @@ const AlbumForm = ({ albumId = null, onClose }) => {
               minLength={1}
             />
           </div>
-          <div>
+          <div className="titulos">
             <label>Año:</label>
             <input
               type="number"
@@ -131,21 +131,25 @@ const AlbumForm = ({ albumId = null, onClose }) => {
               min={-2147483648}
             />
           </div>
-          <div>
-            <label>Portada del álbum:</label>
-            <input
-              type="file"
-              name="cover"
-              accept="image/*"
-              onChange={handleFileChange}
-            />
+          <div className="titulos">
+            <label>Portada del álbum:  </label>
+            <label className="custom-file-upload">
+              <input
+                type="file"
+                name="cover"
+                accept="image/*"
+                onChange={handleFileChange}
+              />
+              
+              Elegir archivo
+            </label>
           </div>
           {previewImage && (
             <div className="preview">
               <img src={previewImage} alt="Preview" className="preview-image" />
             </div>
           )}
-          <div>
+          <div className="titulos">
             <label>Artista:</label>
             <input
               type="number"
@@ -155,9 +159,11 @@ const AlbumForm = ({ albumId = null, onClose }) => {
               required
             />
           </div>
-          <button type="submit" disabled={isLoading}>
-            {isEditMode ? "Actualizar" : "Crear"}
-          </button>
+          <div className="boton-actualizar-container">
+            <button className="boton-actualizar-album" type="submit" disabled={isLoading}>
+              {isEditMode ? "Actualizar" : "Crear"}
+            </button>
+          </div>
         </form>
       </div>
     </div>
