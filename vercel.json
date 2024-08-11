@@ -1,6 +1,6 @@
 {
     "rewrites": [
-        { "source": "/(.*)", 
+        { "source": "/api/(.*)", 
         "destination": "http://sandbox.academiadevelopers.com/harmonyhub/$1"
         }]
     
