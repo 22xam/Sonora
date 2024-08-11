@@ -17,6 +17,7 @@ import HeaderArtist from "../components/Artist/HeaderArtist.jsx";
 
 import NotFound from "../components/NotFound/NotFound.jsx";
 import ArtistListBox from "../components/Artist/ArtistListBox.jsx";
+import Perfil from "../components/Perfil/Perfil.jsx";
 
 const Router = createBrowserRouter([
   {
@@ -95,10 +96,11 @@ const Router = createBrowserRouter([
         ],
       },
       {
-        path: "profile",
+        path: "Perfil",
         element: (
           <ProtectedRoute>
-            <Logout />
+            <Perfil />
+            <Carousel />
           </ProtectedRoute>
         ),
       },

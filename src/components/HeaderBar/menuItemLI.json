@@ -17,7 +17,7 @@
       "icon": "lab la-user-tie"
     },
     {
-      "path": "/profile",
+      "path": "/perfil",
       "label": "Perfil",
       "icon": "lab la-user"
     },
