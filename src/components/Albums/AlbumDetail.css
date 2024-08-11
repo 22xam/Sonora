@@ -1,0 +1,36 @@
+.album-detail-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .album-detail-header {
+    display: flex;
+    align-items: center;
+  }
+  
+  .album-detail-image {
+    width: 200px;
+    height: 200px;
+    margin-right: 20px;
+    border-radius: 10px;
+  }
+  
+  .album-detail-info h1 {
+    margin: 0;
+  }
+  
+  .btn-volver {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn-volver:hover {
+    background-color: #0056b3;
+  }
+  
