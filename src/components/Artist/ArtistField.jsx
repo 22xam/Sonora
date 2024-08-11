@@ -13,7 +13,7 @@ function ArtistField({ artistId, field }) {
             method: "GET",
             headers: {
               "Content-Type": "application/json",
-              Authorization: `Bearer ${import.meta.env.VITE_API_TOKEN}`,
+              Authorization: `Token ${localStorage.getItem("authToken")}`,
             },
           }
         );

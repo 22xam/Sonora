@@ -23,7 +23,7 @@ function ArtistListBox({ onArtistSelect }) {
       const response = await axios.get(currentPageUrl, {
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${import.meta.env.VITE_API_TOKEN}`,
+          Authorization: `Token ${localStorage.getItem("authToken")}`,
         },
       });
 
@@ -53,7 +53,7 @@ function ArtistListBox({ onArtistSelect }) {
 
   const handleArtistClick = (id) => {
     setSelectedArtistId(id);
-    onArtistSelect(id); // Asegúrate de que esta función sea llamada
+    onArtistSelect(id);
   };
 
   return (
@@ -64,11 +64,12 @@ function ArtistListBox({ onArtistSelect }) {
           <div
             key={artist.id}
             className={`listbox-item ${
-              selectedArtistId === artist.id ? "selected" : ""
+              selectedArtistId === artist.id ? "selected" : " "
             }`}
             onClick={() => handleArtistClick(artist.id)}
           >
-            {artist.name}
+            <span>{artist.name}</span>
+            <span className="id-listbox"> ID:  {artist.id}</span>
           </div>
         ))}
       </div>
@@ -77,6 +78,7 @@ function ArtistListBox({ onArtistSelect }) {
       )}
       <div className="pagination-buttons">
         <button
+          className="Ant-Sig"
           type="button"
           onClick={handlePreviousPage}
           disabled={!previousPageUrl}
@@ -84,12 +86,20 @@ function ArtistListBox({ onArtistSelect }) {
           Anterior
         </button>
 
-        <button typo="button" onClick={handNavegation}>
-          {" "}
-          Agregar Artista{" "}
+        <button
+          className="boton-agregar-artista"
+          type="button"
+          onClick={handNavegation}
+        >
+          Agregar Artista
         </button>
 
-        <button type="button" onClick={handleNextPage} disabled={!nextPageUrl}>
+        <button
+          className="Ant-Sig"
+          type="button"
+          onClick={handleNextPage}
+          disabled={!nextPageUrl}
+        >
           Siguiente
         </button>
       </div>

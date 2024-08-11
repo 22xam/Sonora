@@ -18,16 +18,17 @@ export const data = [
       id: 11, imgUrl: "src/assets/images/ROLLING.jpg"
     },
     {
-      id: 12, imgUrl: "src/assets/images/ROLLING2.jpg"
+      id: 12, imgUrl: "src/assets/images/NIRVANAa.jpg"
     },
     {
       id: 13, imgUrl: "src/assets/images/QUEEN.jpg"
     },
     {
-      id: 14, imgUrl: "src/assets/images/NIRVANA.jpg"
+      id: 14, imgUrl: "src/assets/images/ROLLING2.jpg"
     },
     {
       id: 15, imgUrl: "src/assets/images/LENNY.jpg"
     },
+    
   ];
 

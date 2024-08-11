@@ -8,8 +8,8 @@
 
 .carousel-li {
   display: inline-block;
-  width: 25%; /* Mostrar cuatro imágenes por fila */
-  box-sizing: border-box; /* Asegura que el padding y border se incluyan en el ancho total */
+  width: 25%; 
+  box-sizing: border-box; 
 }
 
 .carousel-img {
@@ -54,5 +54,5 @@
 .container-images {
   display: flex;
   transition: transform 0.5s ease-in-out;
-  overflow: hidden; /* Asegura que no haya desbordamiento */
+  overflow: hidden; /* verificar cambios */
 }

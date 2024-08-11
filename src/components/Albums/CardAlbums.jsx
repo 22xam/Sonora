@@ -45,7 +45,7 @@ function CardAlbums({
       buttons: ["No", "Si Seguro"],
     }).then((willDelete) => {
       if (willDelete) {
-        const token = import.meta.env.VITE_API_TOKEN; //localStorage.getItem("authToken");
+        const token = localStorage.getItem("authToken"); //localStorage.getItem("authToken");
         fetch(
           `https://sandbox.academiadevelopers.com/harmonyhub/albums/${id}`,
           {

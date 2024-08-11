@@ -1,7 +1,23 @@
-/* src/components/ArtistListBox.css */
 .artist-listbox-container {
-  width:auto;
+  width: auto;
   margin: 0 auto;
+}
+
+.listbox::-webkit-scrollbar {
+  width: 8px; 
+}
+
+.listbox::-webkit-scrollbar-track {
+  background: transparent; 
+}
+
+.listbox::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 10px; 
+}
+
+.listbox::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }
 
 .listbox {
@@ -10,14 +26,21 @@
   overflow-y: auto;
   padding: 5px;
   background-color: #f9f9f9;
+  border-radius: 10px; 
 }
 
 .listbox-item {
   padding: 10px;
   cursor: pointer;
   border-bottom: 1px solid #ddd;
-  color:black;
-  font-size:medium;
+  color: black;
+  font-size: medium;
+  display: flex;
+  justify-content: space-between; 
+}
+
+.listbox-item:not(:last-child) {
+  border-bottom: 1px solid #ccc; 
 }
 
 .listbox-item:hover {
@@ -37,9 +60,6 @@
 .pagination-buttons button {
   padding: 8px 16px;
   cursor: pointer;
-  border: 1px solid #007bff;
-  background-color: #007bff;
-  color: white;
 }
 
 .pagination-buttons button:disabled {
@@ -47,3 +67,25 @@
   border: 1px solid #cccccc;
   cursor: not-allowed;
 }
+
+.boton-agregar-artista {
+  background: var(--color-apuesto);
+  color: var(--color-letra-pricipal);
+  padding: 10px;
+  display: flex;
+  border: 2px solid var(--color-apuesto);
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  box-shadow: 0px 8px 16px rgba(0.2, 0.2, 0.5, 1);
+}
+
+.boton-agregar-albun:hover {
+  background-color: var(--color-terciario);
+}
+
+.id-listbox{
+  color:#adaaaa;
+} /*cambios arreglar el color de los id*/
