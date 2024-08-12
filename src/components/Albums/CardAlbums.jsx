@@ -43,12 +43,12 @@ function CardAlbums({
   const handleDeleteClick = () => {
     swal({
       title: "¿Seguro de eliminar el Album?",
-      text: "Eliminara el album no podra desaser esta operacion",
+      text: "Eliminara el album no podrá deshacer esta operacion",
       icon: "warning",
       buttons: ["No", "Si Seguro"],
     }).then((willDelete) => {
       if (willDelete) {
-        const token = localStorage.getItem("authToken"); //localStorage.getItem("authToken");
+        const token = localStorage.getItem("authToken"); 
         fetch(
           `https://sandbox.academiadevelopers.com/harmonyhub/albums/${id}`,
           {

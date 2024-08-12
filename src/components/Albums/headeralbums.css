@@ -83,37 +83,4 @@
     transition: 0.2s linear;
 }
 
-/* revisar para el modal albumform
-.header-albums {
-    padding: 20px;
-  }
-  
-  .header-albums-title {
-    margin-bottom: 20px;
-  }
-  
-  .header-albums-card-create {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  
-  .header-albums-card-create img {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    margin-bottom: 20px;
-  }
-  
-  .header-albums-btn-create {
-    cursor: pointer;
-    color: #007bff;
-    font-weight: bold;
-  }
-  
-  .header-albums-btn-create:hover {
-    text-decoration: underline;
-  }
-  
-  */
+
