@@ -9,7 +9,7 @@ function AlbumDetail() {
   const location = useLocation();
   const { title, cover, year, artist } = location.state || {};
   const navigate = useNavigate();
-
+  //este es un comentario de prueba
   const handleBackClick = () => {
     navigate(-1);
   };
