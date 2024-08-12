@@ -58,7 +58,7 @@ function Auth() {
         <article className="container-form logueo">
           <form onSubmit={handleSubmit}>
             <p className="icono-container">
-              <img src="/src/assets/logo.png" alt=""></img>
+              <img src="https://i.ibb.co/DK4rPYZ/logo.png" alt=""></img>
             </p>
             <h2>Inicia Sesion</h2>
             <div className="container-input form-group">
@@ -93,4 +93,4 @@ function Auth() {
   );
 }
 
-export default Auth;/*revisar cambios*/
+export default Auth; /*revisar cambios*/

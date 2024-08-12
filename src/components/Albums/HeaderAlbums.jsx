@@ -19,7 +19,7 @@ function HeaderAlbums() {
         <h2>Álbumes que No Puedes Dejar de Escuchar</h2>
       </section>
       <section className="header-albums-card-create">
-        <img src="../src/assets/albums.jpg" alt="nuevo-albums" />
+        <img src="https://i.ibb.co/XJCJhBw/albums.jpg" alt="nuevo-albums" />
         <p>
           ¡Deja que tu música hable por ti! Agrega un álbum, comparte tus
           gustos, emociones y conectate con el mundo. Es tu momento de mostrar

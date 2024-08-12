@@ -7,7 +7,7 @@ function HeaderSongs() {
         <h2>Canciones que te van a volar la cabeza</h2>
       </section>
       <section className="header-songs-card-create">
-        <img src="../src/assets/songs.jpeg" alt="nuevo-songs" />
+        <img src="https://i.ibb.co/g7xSVDH/songs.jpg" alt="nuevo-songs" />
         <p>
           ¡Deja que tu música hable por ti! Agrega tus canciones favoritas,
           comparte tus gustos, emociones y conectate con el mundo. Es tu momento
