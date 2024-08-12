@@ -14,6 +14,12 @@ function AlbumDetail() {
     navigate(-1);
   };
 
+  const handleAgregarClick = () => {
+    navigate(`/Albums/create-song/${id}`, {
+      state: { id, title, cover, year, artist },
+    });
+  };
+
   return (
     <div className="album-detail-container">
       <button onClick={handleBackClick} className="btn-volver">
@@ -38,9 +44,12 @@ function AlbumDetail() {
             <strong>Biografia: </strong>
             <ArtistField artistId={artist} field="bio" />
           </p>
-          <a href="/Songs/create">
-            <label className="header-albums-btn-create">Agregar</label>
-          </a>
+          <label
+            className="header-albums-btn-create"
+            onClick={handleAgregarClick}
+          >
+            Agregar
+          </label>
         </div>
       </div>
 

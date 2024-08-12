@@ -9,13 +9,12 @@ function HeaderSongs() {
       <section className="header-songs-card-create">
         <img src="../src/assets/songs.jpeg" alt="nuevo-songs" />
         <p>
-          ¡Deja que tu música hable por ti! Agrega tus canciones favoritas, comparte tus gustos,
-          emociones y conectate con el mundo. Es tu momento de mostrar lo que te gusta.
+          ¡Deja que tu música hable por ti! Agrega tus canciones favoritas,
+          comparte tus gustos, emociones y conectate con el mundo. Es tu momento
+          de mostrar lo que te gusta.
         </p>
-        <a href="/songs/create">
-          <label className="header-songs-btn-create">
-            Agregar
-          </label>
+        <a href="/songs/onlycreate">
+          <label className="header-songs-btn-create">Agregar</label>
         </a>
       </section>
     </section>
