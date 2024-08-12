@@ -4,7 +4,7 @@ import MenuItem from "./MenuItem.jsx";
 import { useAuth } from "../contexts/AuthContext.jsx";
 import menuItemLO from "./menuItemLO.json";
 import menuItemLI from "./menuItemLI.json";
-import logo from "../../assets/logo.png";
+//import logo from "../../assets/logo.png";
 
 function HeaderBar() {
   const { isAuthenticated } = useAuth("state");
@@ -21,7 +21,11 @@ function HeaderBar() {
       <nav className="menu_container">
         <section className="menu_logo">
           <a href="/">
-            <img src={logo} alt="Logo" className="logo" />
+            <img
+              src="https://i.ibb.co/DK4rPYZ/logo.png"
+              alt="Logo"
+              className="logo"
+            />
             <span>SONORA</span>
           </a>
         </section>
