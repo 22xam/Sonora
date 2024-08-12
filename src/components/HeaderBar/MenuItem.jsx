@@ -20,7 +20,7 @@ function MenuItem({ path, label, icon }) {
           logout();
           navigate("/");
         } else {
-          navigate("/");
+          //navigate("/");
         }
       });
     }

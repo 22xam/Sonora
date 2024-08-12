@@ -14,10 +14,17 @@ function AlbumDetail() {
     navigate(-1);
   };
 
+  const handleAgregarClick = () => {
+    navigate(`/Albums/create-song/${id}`, {
+      state: { id, title, cover, year, artist },
+    });
+  };
+
   return (
     <section className="fondo">
       <div className="cont-volver">
       <button onClick={handleBackClick} className="btn-volver">
+
           Volver a Albums
         </button>
       </div>
@@ -39,6 +46,7 @@ function AlbumDetail() {
               <label className="header-albums-btn-create">Agregar canciones a este album</label>
             </a>
           </div>
+
         </div>
       </div>
       <AlbumSongs />
