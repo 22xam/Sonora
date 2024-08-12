@@ -74,58 +74,65 @@ const OnlyCreateSong = () => {
   };
 
   return (
-    <div>
-      <h2>Agrega una cancion</h2>
-      <h3>Sin Albums</h3>
+    <section className="fondo">
+      <div className="agregar-cancion">
+        <article>
+          <div>
+            <h2 className="titulo-agregar-cancion">Agrega una cancion</h2>
+            <h3 className="titulos">Sin Albums</h3>
+            <form onSubmit={handleSubmit}>
+              <div className="titulos">
+                <label className="boton-agregar-cancion" htmlFor="songFile">Seleccione un archivo MP3</label>
+                <input
+                  type="file"
+                  id="songFile"
+                  onChange={handleFileChange}
+                  required
+                />
+                {fileName && <p>Archivo seleccionado: {fileName}</p>}
+                </div>
+                <div>
+                  <label htmlFor="title">Titulo de la cancion</label>
+                  <input
+                    type="text"
+                    id="title"
+                    value={title}
+                    onChange={(e) => setTitle(e.target.value)}
+                    required
+                  />
+                </div>
+                <div>
+                  <label htmlFor="year">Año</label>
+                  <input
+                    type="number"
+                    id="year"
+                    value={year}
+                    onChange={(e) => setYear(e.target.value)}
+                    required
+                  />
+                </div>
+                <div>
+                  <label htmlFor="duration">Duración (segundos)</label>
+                  <input
+                    type="number"
+                    id="duration"
+                    value={duration}
+                    onChange={(e) => setDuration(e.target.value)}
+                    required
+                  />
+                </div>
+                <div className="button-container">
 
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="songFile">Seleccione un archivo MP3</label>
-          <input
-            type="file"
-            id="songFile"
-            onChange={handleFileChange}
-            required
-          />
-          {fileName && <p>Archivo seleccionado: {fileName}</p>}
+                  <button className= "boton-agregar-cancion"type="submit">Agregar canción</button>
+                </div>
+              </form>
+              {isLoading && <p style={{ color: "blue" }}>Cargando...</p>}
+              {error && <p style={{ color: "red" }}>{error}</p>}
+              {success && <p style={{ color: "green" }}>{success}</p>}
+            </div>
+          </article>
         </div>
-        <div>
-          <label htmlFor="title">Titulo de la cancion</label>
-          <input
-            type="text"
-            id="title"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="year">Año</label>
-          <input
-            type="number"
-            id="year"
-            value={year}
-            onChange={(e) => setYear(e.target.value)}
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="duration">Duración (segundos)</label>
-          <input
-            type="number"
-            id="duration"
-            value={duration}
-            onChange={(e) => setDuration(e.target.value)}
-            required
-          />
-        </div>
-
-        <button type="submit">Agregar canción</button>
-      </form>
-      {isLoading && <p style={{ color: "blue" }}>Cargando...</p>}
-      {error && <p style={{ color: "red" }}>{error}</p>}
-      {success && <p style={{ color: "green" }}>{success}</p>}
-    </div>
+      </section>
   );
 };
 
