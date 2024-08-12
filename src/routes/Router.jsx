@@ -19,6 +19,8 @@ import NotFound from "../components/NotFound/NotFound.jsx";
 import ArtistListBox from "../components/Artist/ArtistListBox.jsx";
 import Perfil from "../components/Perfil/Perfil.jsx";
 import AlbumDetail from "../components/Albums/AlbumDetail.jsx";
+import CreateSong from "../components/Songs/CreateSong.jsx";
+import OnlyCreateSong from "../components/Songs/OnlyCreateSong.jsx";
 
 const Router = createBrowserRouter([
   {
@@ -41,6 +43,7 @@ const Router = createBrowserRouter([
             element: <HeaderAlbums />,
           },
           { path: ":id", element: <AlbumDetail /> },
+          { path: "create-song/:id", element: <CreateSong /> },
           {
             path: "List",
             element: (
@@ -65,12 +68,24 @@ const Router = createBrowserRouter([
       },
       {
         path: "songs",
-
-        element: (
-          <ProtectedRoute>
-            <ListSongs />
-          </ProtectedRoute>
-        ),
+        children: [
+          {
+            index: true,
+            element: (
+              <ProtectedRoute>
+                <ListSongs />
+              </ProtectedRoute>
+            ),
+          },
+          {
+            path: "onlycreate",
+            element: (
+              <ProtectedRoute>
+                <OnlyCreateSong />
+              </ProtectedRoute>
+            ),
+          },
+        ],
       },
       {
         path: "Artist",
@@ -103,7 +118,6 @@ const Router = createBrowserRouter([
           <ProtectedRoute>
             <Carousel />
             <Perfil />
-            
           </ProtectedRoute>
         ),
       },
