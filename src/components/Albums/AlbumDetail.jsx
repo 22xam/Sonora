@@ -42,8 +42,8 @@ function AlbumDetail() {
             <p>Artista: <ArtistField artistId= {artist} field="name" /> </p>
             <p className="album-detail-info-biografia">Biografia: <ArtistField artistId= {artist} field="bio" /> </p>
             
-            <a href="/Songs/create">
-              <label className="header-albums-btn-create">Agregar canciones a este album</label>
+            <a >
+              <label className="header-albums-btn-create" onClick={handleAgregarClick}>Agregar canciones a este album</label>
             </a>
           </div>
 
