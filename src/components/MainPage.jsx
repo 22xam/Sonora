@@ -16,7 +16,7 @@ function MainPage() {
         </p>
         <div className="btn-login">
           {isAuthenticated ? (
-            <a href="/profile"> Estas en Sonora </a>
+            <a href="/perfil"> Estas en Sonora </a>
           ) : (
             <a href="/login"> Ingresa a SONARA</a>
           )}
