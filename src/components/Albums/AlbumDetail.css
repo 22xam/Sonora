@@ -1,36 +1,95 @@
+:root{
+  --color-principal:#591414;
+  --color-secundario:#8C1111;
+  --color-terciario:#A6242F;
+  --color-negro:#0D0908;
+  --color-alternativo-I:#7D6841;
+  --color-alternativo-II:#3045BF;
+  --color-apuesto:#145959;
+  --color-fondo:#E7E1E1;
+  --color-letra-pricipal: #fff;
+}
+
 .album-detail-container {
-    padding: 20px;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  .album-detail-header {
-    display: flex;
-    align-items: center;
-  }
-  
-  .album-detail-image {
-    width: 200px;
-    height: 200px;
-    margin-right: 20px;
-    border-radius: 10px;
-  }
-  
-  .album-detail-info h1 {
-    margin: 0;
-  }
-  
-  .btn-volver {
-    margin-bottom: 20px;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .btn-volver:hover {
-    background-color: #0056b3;
-  }
-  
+  padding: 20px;
+  max-width: 100%;
+  margin: 0 auto;
+  align-items: flex-start;
+  display: flex;
+}
+
+.album-detail-header {
+  display: flex;
+  align-items: flex-start;
+}
+
+.album-detail-image {
+  width: 70%;
+  max-width: 300px;
+  height: auto;
+  margin-right: 20px;
+  border-radius: 10px;
+}
+
+.album-detail-info-biografia {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: var(--color-letra-pricipal);
+  font-family: 'Trebuchet MS', Helvetica, sans-serif; 
+  text-align: left;
+  overflow-x: auto; 
+  max-width: 100%; 
+  white-space: nowrap; 
+}
+
+.album-detail-info {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: var(--color-letra-pricipal);
+  font-family: 'Trebuchet MS', Helvetica, sans-serif; 
+  text-align: left;
+  overflow-x: auto; 
+  max-width: 100%; 
+  white-space: nowrap; 
+}
+
+.titulo-album{
+  font-family: 'Trebuchet MS', Helvetica, sans-serif; 
+  font-size: 3rem;
+  text-align: flex;
+  margin-bottom: 15px;
+  color: var(--color-letra-pricipal);
+}
+
+.cont-volver{
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.btn-volver {
+  background-color: var(--color-apuesto);
+  color: var(--color-letra-pricipal);
+  padding: 10px;
+  display: flex;
+  border: 3px solid var(--color-principal);
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  box-shadow: 0px 8px 16px rgba(0.2, 0.2, 0.5, 1);
+}
+
+.btn-volver:hover {
+  background-color: var(--color-terciario);
+}
+
+.header-albums-btn-create {
+  display: flex;
+  justify-content: left;
+  padding: 20px;
+  color: rgb(250, 5, 238)
+}

@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import CardSong from "../Songs/CardSongs.jsx";
-import "../Songs/ListSongs.css";
+import "./AlbumSongs.css";
 
 export default function AlbumSongs() {
-  const { id } = useParams(); // Obtener album_pk desde los parámetros de la URL
+  const { id } = useParams(); 
   const [songs, setSongs] = useState([]);
   const [nextURL, setNextURL] = useState(null);
   const [previousURL, setPreviousURL] = useState(null);
@@ -20,7 +20,6 @@ export default function AlbumSongs() {
       }
       const data = await response.json();
 
-      // Verificar si el álbum tiene canciones
       if (data.count === 0) {
         swal({
           title: "El album no contiene canciones",
@@ -61,7 +60,6 @@ export default function AlbumSongs() {
 
   return (
     <>
-      <section className="fondo">
         <div>
           <div className="list-songs">
             <ul className="song-list">
@@ -71,29 +69,28 @@ export default function AlbumSongs() {
                 </li>
               ))}
             </ul>
-            <div className="button-container">
-              {isLoading && (
-                <p className="loading-text">Cargando más canciones...</p>
-              )}
-              <button
-                className="button"
-                onClick={handlePreviousPage}
-                disabled={!previousURL}
-              >
-                Anterior
-              </button>
-              <button
-                className="button"
-                onClick={handleNextPage}
-                disabled={!nextURL}
-              >
-                Siguiente
-              </button>
-              {isError && <p>Error al cargar las canciones.</p>}
+            <div className={`button-container ${isLoading ? 'loading' : ''}`}>
+                {isLoading && (
+                  <p className="loading-text">Cargando más canciones...</p>
+                )}
+                <button
+                  className="button"
+                  onClick={handlePreviousPage}
+                  disabled={!previousURL}
+                >
+                  Anterior
+                </button>
+                <button
+                  className="button"
+                  onClick={handleNextPage}
+                  disabled={!nextURL}
+                >
+                  Siguiente
+                </button>
+                {isError && <p>Error al cargar las canciones.</p>}
             </div>
           </div>
         </div>
-      </section>
     </>
   );
 }
