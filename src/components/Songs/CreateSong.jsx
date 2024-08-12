@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import "./CreateSong.css";
 
 const CreateSong = () => {
   const location = useLocation();
@@ -89,62 +90,74 @@ const CreateSong = () => {
   };
 
   return (
-    <div>
-      <button onClick={handleBackClick} className="btn-volver">
-        Volver
-      </button>
-      <h2>Agrega una cancion</h2>
-      <h3>Album {initialTitle}</h3>
-      <h4>Año del Album {initialYear} </h4>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="songFile">Seleccione un archivo MP3</label>
-          <input
-            type="file"
-            id="songFile"
-            onChange={handleFileChange}
-            required
-          />
-          {fileName && <p>Archivo seleccionado: {fileName}</p>}
-        </div>
-        <div>
-          <label htmlFor="title">Titulo de la cancion</label>
-          <input
-            type="text"
-            id="title"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="year">Año</label>
-          <input
-            type="number"
-            id="year"
-            value={year}
-            onChange={(e) => setYear(e.target.value)}
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="duration">Duración (segundos)</label>
-          <input
-            type="number"
-            id="duration"
-            value={duration}
-            onChange={(e) => setDuration(e.target.value)}
-            required
-          />
-        </div>
-
-        <button type="submit">Agregar canción</button>
-      </form>
-      {isLoading && <p style={{ color: "blue" }}>Cargando...</p>}
-      {error && <p style={{ color: "red" }}>{error}</p>}
-      {success && <p style={{ color: "green" }}>{success}</p>}
-    </div>
+    <section className="fondo">
+      <div className="button-container">
+        <button onClick={handleBackClick} className="boton-agregar-cancion">
+        Volver al album
+        </button>
+      </div>
+      <div className="agregar-cancion">
+        <article>
+          <div>
+            <h2 className="titulo-agregar-cancion">Agrega una cancion</h2>
+            <h3 className="titulos">Album {initialTitle}</h3>
+            <h4 className="titulos"> Año del Album {initialYear} </h4>
+            <div>
+            <form onSubmit={handleSubmit}>
+              <div className="titulos">
+                <button className="boton-agregar-cancion" htmlFor="songFile">Seleccione un archivo MP3</button>
+                <input
+                  type="file"
+                  id="songFile"
+                  onChange={handleFileChange}
+                  required
+                />
+                {fileName && <p>Archivo seleccionado: {fileName}</p>}
+              </div>
+              <div>
+                <label htmlFor="title">Titulo de la cancion</label>
+                <input
+                  type="text"
+                  id="title"
+                  value={title}
+                  onChange={(e) => setTitle(e.target.value)}
+                  required
+                />
+              </div>
+              <div>
+                <label htmlFor="year">Año</label>
+                <input
+                  type="number"
+                  id="year"
+                  value={year}
+                  onChange={(e) => setYear(e.target.value)}
+                  required
+                />
+              </div>
+              <div>
+                <label htmlFor="duration">Duración (segundos)</label>
+                <input
+                  type="number"
+                  id="duration"
+                  value={duration}
+                  onChange={(e) => setDuration(e.target.value)}
+                  required
+                />
+              </div >
+              <div className="button-container">
+              <button className= "boton-agregar-cancion" type="submit">Agregar canción</button>
+              </div>
+              </form>
+              {isLoading && <p style={{ color: "blue" }}>Cargando...</p>}
+              {error && <p style={{ color: "red" }}>{error}</p>}
+              {success && <p style={{ color: "green" }}>{success}</p>}
+              </div>
+          </div>
+        </article>
+      </div>
+    </section>
   );
 };
 
 export default CreateSong;
+
